@@ -1,0 +1,15 @@
+img {
+    height: 1.5vw;
+    width: 1.5vw;
+    margin-top: 2.5vw;
+}
+
+img:hover {
+    transform: scale(1.3);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+#github-icon {
+    margin-right: 1.5vw;
+}
