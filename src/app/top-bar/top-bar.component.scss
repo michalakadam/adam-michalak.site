@@ -1,18 +1,12 @@
-@import "~src/variables.scss";
-
 .top-bar-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     margin: 0 30px;
 }
 
-.mission {
-    font-size: 30px;
-    font-style: italic;
-    font-weight: bolder;
-    @media only screen and (max-width: $mobile-large) {
-       font-size: 20px;
-    }
+.name {
+    font-size: 20px;
+    opacity: 0.5;
 }
