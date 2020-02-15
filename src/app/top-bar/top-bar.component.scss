@@ -1,0 +1,12 @@
+.top-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mission {
+    font-size: 3vw;
+    font-style: italic;
+    font-weight: bolder;
+}

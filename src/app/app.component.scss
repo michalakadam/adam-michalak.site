@@ -1,17 +1,18 @@
-mat-card {
-  max-width: 70%;
-  margin: 20px auto 0;
-  text-align: center;
+.page-container {
+  display: flex;
+  flex-direction: column;
 }
 
-mat-card-title {
-  font-size: 44px;
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-mat-card-subtitle {
-  font-size: 24px;
+app-articles-list {
+  flex-grow: 3;
 }
 
-.god {
-  width: 95%;
+app-bio {
+  flex-grow: 1;
 }

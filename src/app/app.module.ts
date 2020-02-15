@@ -5,10 +5,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { BioComponent } from './bio/bio.component';
+import { NavigationComponent } from './top-bar/navigation/navigation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopBarComponent,
+    ArticlesListComponent,
+    BioComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
