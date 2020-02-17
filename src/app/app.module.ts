@@ -10,6 +10,7 @@ import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { BioComponent } from './bio/bio.component';
 import { NavigationComponent } from './top-bar/navigation/navigation.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { UnderConstructionComponent } from './under-construction/under-construction.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     ArticlesListComponent,
     BioComponent,
     NavigationComponent,
-    MainPageComponent
+    MainPageComponent,
+    UnderConstructionComponent
   ],
   imports: [
     BrowserModule,
