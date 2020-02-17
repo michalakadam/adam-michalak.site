@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { BioComponent } from './bio/bio.component';
 import { NavigationComponent } from './top-bar/navigation/navigation.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavigationComponent } from './top-bar/navigation/navigation.component';
     TopBarComponent,
     ArticlesListComponent,
     BioComponent,
-    NavigationComponent
+    NavigationComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
