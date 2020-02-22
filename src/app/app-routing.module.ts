@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
-import { BioComponent } from './bio/bio.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: BioComponent
+    component: AboutComponent
   },
   {
     path: '**',

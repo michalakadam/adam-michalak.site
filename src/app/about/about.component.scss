@@ -1,0 +1,25 @@
+@import "~src/variables.scss";
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 10%;
+    @media screen and (max-width: $mobile-large) {
+        margin: 0 5%;
+    }
+}
+
+h1 {
+    @media screen and (max-width: $mobile-large) {
+        font-size: 1em;
+    }
+}
+
+p {
+    margin: 0 10%;
+    text-align: justify;
+    @media screen and (max-width: $mobile-large) {
+        margin: 0 5%;
+    }
+}
