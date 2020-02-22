@@ -12,6 +12,7 @@ import { NavigationComponent } from './top-bar/navigation/navigation.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     NavigationComponent,
     MainPageComponent,
     UnderConstructionComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PageFooterComponent
   ],
   imports: [
     BrowserModule,
