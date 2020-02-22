@@ -1,0 +1,24 @@
+@import "~src/variables.scss";
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.error-emoji {
+    font-size: 96px;
+    opacity: 50%;
+    @media screen and (max-width: $mobile-large) {
+        font-size: 64px;
+    }
+}
+
+.error-message {
+    font-size: 16px;
+    margin-top: 20px;
+    @media screen and (max-width: $mobile-large) {
+        font-size: 12px;
+    }
+}

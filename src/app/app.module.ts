@@ -11,6 +11,7 @@ import { BioComponent } from './bio/bio.component';
 import { NavigationComponent } from './top-bar/navigation/navigation.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UnderConstructionComponent } from './under-construction/under-construct
     BioComponent,
     NavigationComponent,
     MainPageComponent,
-    UnderConstructionComponent
+    UnderConstructionComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { BioComponent } from './bio/bio.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: BioComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   },
 ];
 
