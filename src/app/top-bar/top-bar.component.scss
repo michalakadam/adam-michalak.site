@@ -1,13 +1,21 @@
+@import "~src/variables.scss";
+
 .top-bar-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: 15px 30px;
+    @media screen and (max-width: $mobile-large) {
+        margin: 10px 15px;
+    }
 }
 
 .name {
     cursor: pointer;
     font-size: 20px;
     opacity: 0.5;
+    @media screen and (max-width: $mobile-large) {
+        font-size: 16px;
+    }
 }

@@ -1,12 +1,26 @@
+@import "~src/variables.scss";
+
 .navigation-container {
     display: flex;
     margin-top: 8px;
+    @media screen and (max-width: $mobile-large) {
+        margin-top: 6px;
+    }
 }
 
 div {
     cursor: pointer;
     font-weight: bold;
+    @media screen and (max-width: $mobile-large) {
+        font-size: 14px;
+    }
+}
+
+.navigation-link {
     margin-right: 20px;
+    @media screen and (max-width: $mobile-large) {
+        margin-right: 15px;
+    }
 }
 
 .active {
@@ -17,6 +31,10 @@ div {
 img {
     height: 25px;
     width: 25px;
+    @media screen and (max-width: $mobile-large) {
+        height: 20px;
+        width: 20px;
+    }
 }
 
 img:hover {
@@ -27,4 +45,7 @@ img:hover {
 
 #github-icon {
     margin-right: 20px;
+    @media screen and (max-width: $mobile-large) {
+        margin-right: 15px;
+    }
 }
