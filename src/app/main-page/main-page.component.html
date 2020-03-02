@@ -1,6 +1,10 @@
 <div class="page-container">
     <div class="text">
-        <p class="title">I am<br/> a self-taught<br/>full stack developer.</p>
+        <p class="title">
+            I am<br/>
+            <span class="description" [@fadeOut]="descriptionState" (@fadeOut.done)="onDone($event)">{{description}}</span><br/>
+            full stack developer.&nbsp;
+        </p>
     </div>
     <div class="stack">
         <img src="https://i.imgur.com/zrIouDX.png">

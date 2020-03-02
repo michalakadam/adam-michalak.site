@@ -10,6 +10,15 @@
     }
 }
 
+.background-pic {
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+    opacity: 75%;
+}
+
 h1 {
     @media screen and (max-width: $mobile-large) {
         font-size: 1em;
@@ -17,9 +26,5 @@ h1 {
 }
 
 p {
-    margin: 0 10%;
     text-align: justify;
-    @media screen and (max-width: $mobile-large) {
-        margin: 0 5%;
-    }
 }
