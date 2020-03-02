@@ -16,9 +16,9 @@ export const fadeOut = trigger('fadeOut', [
 })
 export class MainPageComponent {
  
-  private description = "self-taught";
+  description = "self-taught";
   private invocationNumber = 0;
-  private state = "active";
+  state = "active";
 
   constructor() { }
 
