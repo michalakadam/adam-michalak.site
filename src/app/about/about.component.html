@@ -1,37 +1,31 @@
-<div class="background-pic">
-    <img src="https://i.imgur.com/xBAJtKV.jpg">
-</div>
 <div class="about-container">
-    <div class="section">
-        <h1>
-            Who am I ?
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet, duis ut dapibus urna porta mauris tincidunt, tempor lacus tristique gravida, mauris magna pharetra ac. Vehicula aenean eget ac dapibus ultricies justo, elit cupiditate pharetra. Dui sed at, ullamcorper nunc blanditiis, velit tortor pellentesque fusce, vulputate ligula nonummy. In elementum egestas magnis turpis, neque nullam id, quis blandit pellentesque mauris molestie, est odio wisi vel wisi faucibus. Potenti lacus morbi magna volutpat est, felis mi malesuada congue sapien libero vitae, duis justo lacus ac, aliquam feugiat dolor etiam sem ut, porta arcu. Eget elit duis arcu a, aut nec nibh velit sem id, vivamus saepe elementum justo adipiscing dui, quis vivamus, libero vel cursus quod purus. Tempus quis luctus magna quis rhoncus ac, sapien ac eros rhoncus velit donec ut, odio consequat vel, egestas ac in arcu. Lacinia tristique wisi quis eget molestie metus, semper volutpat sed.
-        </p>
+    <div *ngIf="isMobileScreen" class="horizontal-pic-container">
+        <img id="horizontal-pic" src="https://i.imgur.com/NYNiAx3.jpg">
     </div>
     <div class="section">
-        <h1>
-            What do I do ?
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet, duis ut dapibus urna porta mauris tincidunt, tempor lacus tristique gravida, mauris magna pharetra ac. Vehicula aenean eget ac dapibus ultricies justo, elit cupiditate pharetra. Dui sed at, ullamcorper nunc blanditiis, velit tortor pellentesque fusce, vulputate ligula nonummy. In elementum egestas magnis turpis, neque nullam id, quis blandit pellentesque mauris molestie, est odio wisi vel wisi faucibus. Potenti lacus morbi magna volutpat est, felis mi malesuada congue sapien libero vitae, duis justo lacus ac, aliquam feugiat dolor etiam sem ut, porta arcu. Eget elit duis arcu a, aut nec nibh velit sem id, vivamus saepe elementum justo adipiscing dui, quis vivamus, libero vel cursus quod purus. Tempus quis luctus magna quis rhoncus ac, sapien ac eros rhoncus velit donec ut, odio consequat vel, egestas ac in arcu. Lacinia tristique wisi quis eget molestie metus, semper volutpat sed.
-        </p>
+        <div class="title" [ngStyle]="{'margin-top': isMobileScreen ? '10px' : '0'}">
+            <div id="greeting-line">Hi, my name is <span style="color: #d32f2f;">Adam</span>.<br/></div>
+            I develop solutions that are maintainable, useful and intuitive.
+        </div>
+        <div class="paragraph">
+            I believe that adhering to universal principles results in higher quality software and more meaningful personal experiences.
+            I also believe that every individual has the ultimate power to constitute their own reality and I am determined to make mine beautiful and worthwhile.
+            My ultimate aspiration is to be a productive member of society that contributes in a meaningful way to advancement of our species. 
+            I want to be a creative force that maintains and expands order, keeping chaos under control.
+            I am working every day to boost the value I create through my work and social interactions. 
+        </div>
+
+        <div class="paragraph">
+            I am pretty excited to be here. 
+        </div>
+
+        <div class="paragraph">
+            This page serves as a reservoir of the things I've learned over time. 
+            With each article I hope to bring value to the readers and as a side effect develop deeper understanding of concepts and skills.
+            This is a place to share my understanding of various practical aspects of programming and heavily tested approaches to living.    
+        </div>
     </div>
-    <div class="section">
-        <h1>
-            What is this page for ?
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet, duis ut dapibus urna porta mauris tincidunt, tempor lacus tristique gravida, mauris magna pharetra ac. Vehicula aenean eget ac dapibus ultricies justo, elit cupiditate pharetra. Dui sed at, ullamcorper nunc blanditiis, velit tortor pellentesque fusce, vulputate ligula nonummy. In elementum egestas magnis turpis, neque nullam id, quis blandit pellentesque mauris molestie, est odio wisi vel wisi faucibus. Potenti lacus morbi magna volutpat est, felis mi malesuada congue sapien libero vitae, duis justo lacus ac, aliquam feugiat dolor etiam sem ut, porta arcu. Eget elit duis arcu a, aut nec nibh velit sem id, vivamus saepe elementum justo adipiscing dui, quis vivamus, libero vel cursus quod purus. Tempus quis luctus magna quis rhoncus ac, sapien ac eros rhoncus velit donec ut, odio consequat vel, egestas ac in arcu. Lacinia tristique wisi quis eget molestie metus, semper volutpat sed.
-        </p>
-    </div>
-    <div class="section">
-        <h1>
-            How can you contact me ?
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet, duis ut dapibus urna porta mauris tincidunt, tempor lacus tristique gravida, mauris magna pharetra ac. Vehicula aenean eget ac dapibus ultricies justo, elit cupiditate pharetra. Dui sed at, ullamcorper nunc blanditiis, velit tortor pellentesque fusce, vulputate ligula nonummy. In elementum egestas magnis turpis, neque nullam id, quis blandit pellentesque mauris molestie, est odio wisi vel wisi faucibus. Potenti lacus morbi magna volutpat est, felis mi malesuada congue sapien libero vitae, duis justo lacus ac, aliquam feugiat dolor etiam sem ut, porta arcu. Eget elit duis arcu a, aut nec nibh velit sem id, vivamus saepe elementum justo adipiscing dui, quis vivamus, libero vel cursus quod purus. Tempus quis luctus magna quis rhoncus ac, sapien ac eros rhoncus velit donec ut, odio consequat vel, egestas ac in arcu. Lacinia tristique wisi quis eget molestie metus, semper volutpat sed.
-        </p>
+    <div *ngIf="!isMobileScreen" class="vertical-pic-container">
+        <img id="vertical-pic" src="https://i.imgur.com/nH62KPH.jpg">
     </div>
 </div>
