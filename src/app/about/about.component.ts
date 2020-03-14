@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit, OnDestroy {
 
       this.resizeObservable$ = fromEvent(window, 'resize');
       this.resizeSubscription$ = this.resizeObservable$.subscribe( event => {
-        this.isMobileScreen = this.computeIsMobileScreen(event.target.innerWidth);
+        this.isMobileScreen = this.computeIsMobileScreen(window.innerWidth);
       });
   }
 
