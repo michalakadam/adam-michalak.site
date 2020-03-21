@@ -19,7 +19,7 @@
 }
 
 .article-card {
-    animation: cardEntrance 700ms ease-out;
+    animation: entranceAnimation 700ms ease-out;
     animation-fill-mode: backwards;
     margin: 0 auto;
     cursor: pointer;
@@ -30,17 +30,6 @@
     transform: perspective(1px) scale(1.05); 
     transition-duration: 500ms;
 }  
-
-@keyframes cardEntrance {
-    from {
-      opacity: 0;
-      transform: scale(0.3);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-}
 
 @for $i from 1 through 9 {
     .article-card:nth-child(#{$i}) {
