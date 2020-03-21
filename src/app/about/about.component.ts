@@ -21,7 +21,6 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   private computeIsMobileScreen(screenWidth: number) {
-    console.log(screenWidth);
     return screenWidth < 961 ? true : false;
   }
 
