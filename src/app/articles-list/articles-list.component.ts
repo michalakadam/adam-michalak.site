@@ -15,9 +15,9 @@ export class ArticlesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { 
-    console.log(articlesContents.contents.forEach(article => {
+    articlesContents.contents.forEach(article => {
       this.articles.push(article);
-    }));
+    });
   }
 
 }

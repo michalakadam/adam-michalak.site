@@ -16,7 +16,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleCardComponent } from './articles-list/article-card/article-card.component';
-import { ArticleComponent } from './articles-list/article/article.component';
 import { GenericArticleComponent } from './articles-list/generic-article/generic-article.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { GenericArticleComponent } from './articles-list/generic-article/generic
     PageFooterComponent,
     AboutComponent,
     ArticleCardComponent,
-    ArticleComponent,
     GenericArticleComponent
   ],
   imports: [

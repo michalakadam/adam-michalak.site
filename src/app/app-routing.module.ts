@@ -4,7 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
-import { ArticleComponent } from './articles-list/article/article.component';
+import { GenericArticleComponent } from './articles-list/generic-article/generic-article.component';
 
 
 const routes: Routes = [
@@ -21,19 +21,19 @@ const routes: Routes = [
       },
       {
         path: 'deploy-angular-webapp',
-        component: ArticleComponent
+        component: GenericArticleComponent
       },
       {
         path: 'html-in-email',
-        component: ArticleComponent
+        component: GenericArticleComponent
       },
       {
         path: 'extreme-temperatures',
-        component: ArticleComponent
+        component: GenericArticleComponent
       },
       {
         path: 'ultimate-breakfast',
-        component: ArticleComponent
+        component: GenericArticleComponent
       },
     ]
   },
