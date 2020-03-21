@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
+import { ArticleComponent } from './articles-list/article/article.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,28 @@ const routes: Routes = [
   },
   {
     path: 'articles',
-    component: ArticlesListComponent
+    children: [
+      {
+        path: '',
+        component: ArticlesListComponent
+      },
+      {
+        path: 'deploy-angular-webapp',
+        component: ArticleComponent
+      },
+      {
+        path: 'html-in-email',
+        component: ArticleComponent
+      },
+      {
+        path: 'extreme-temperatures',
+        component: ArticleComponent
+      },
+      {
+        path: 'ultimate-breakfast',
+        component: ArticleComponent
+      },
+    ]
   },
   {
     path: 'about',

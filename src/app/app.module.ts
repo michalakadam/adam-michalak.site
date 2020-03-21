@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleCardComponent } from './articles-list/article-card/article-card.component';
+import { ArticleComponent } from './articles-list/article/article.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ArticleCardComponent } from './articles-list/article-card/article-card.
     PageNotFoundComponent,
     PageFooterComponent,
     AboutComponent,
-    ArticleCardComponent
+    ArticleCardComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

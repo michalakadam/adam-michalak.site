@@ -2,8 +2,27 @@
     "contents": [
         {
             "imageUrl": "https://i.imgur.com/xBAJtKV.jpg",
-            "title": "Test article title",
-            "subTitle": "Test article subtitle"
+            "title": "Deploying Angular web application",
+            "subTitle": "Everything you need to know about deploying Angular WebApp on a remote server",
+            "routerLink": "/articles/deploy-angular-webapp"
+        },
+        {
+            "imageUrl": "https://i.imgur.com/xBAJtKV.jpg",
+            "title": "Embedding HTML content in email",
+            "subTitle": "How to create a beautiful email... and not get discouraged forever",
+            "routerLink": "/articles/html-in-email"
+        },
+        {
+            "imageUrl": "https://i.imgur.com/xBAJtKV.jpg",
+            "title": "How to get high sustainably?",
+            "subTitle": "Benefits of exposing yourself to extreme temperatures",
+            "routerLink": "/articles/extreme-temperatures"
+        },
+        {
+            "imageUrl": "https://i.imgur.com/xBAJtKV.jpg",
+            "title": "The Ultimate Breakfast",
+            "subTitle": "My secret recipe for a better start of the day",
+            "routerLink": "/articles/ultimate-breakfast"
         }
     ]
 }
