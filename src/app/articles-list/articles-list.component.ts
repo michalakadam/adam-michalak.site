@@ -10,7 +10,7 @@ import * as articlesContents from "./articles/contents.json"
 })
 export class ArticlesListComponent implements OnInit {
  
-  private articles: Array<Article> = [];
+  articles: Array<Article> = [];
 
   constructor() { }
 
