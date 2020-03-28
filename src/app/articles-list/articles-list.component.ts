@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Article } from './article.model';
-import * as articlesContents from "./articles/contents.json"
+import { Article } from '../articles/article.model';
+import * as articlesContents from "../articles/contents.json"
 
 @Component({
   selector: 'app-articles-list',

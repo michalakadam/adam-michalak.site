@@ -4,7 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
-import { GenericArticleComponent } from './articles-list/generic-article/generic-article.component';
+import { GenericArticleComponent } from './articles/generic-article/generic-article.component';
 
 
 const routes: Routes = [

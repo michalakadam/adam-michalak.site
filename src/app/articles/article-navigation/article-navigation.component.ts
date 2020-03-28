@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-article-navigation',
   templateUrl: './article-navigation.component.html',
   styleUrls: ['./article-navigation.component.scss']
 })
-export class ArticleNavigationComponent implements OnInit {
+export class ArticleNavigationComponent {
 
   constructor() { }
 
-  ngOnInit() {
+  goToPreviousArticle() {
+
+  }
+
+  goToNextArticle() {
+
   }
 
 }

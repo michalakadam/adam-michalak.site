@@ -16,8 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleCardComponent } from './articles-list/article-card/article-card.component';
-import { GenericArticleComponent } from './articles-list/generic-article/generic-article.component';
-import { ArticleNavigationComponent } from './articles-list/article-navigation/article-navigation.component';
+import { GenericArticleComponent } from './articles/generic-article/generic-article.component';
+import { ArticleNavigationComponent } from './articles/article-navigation/article-navigation.component';
 
 @NgModule({
   declarations: [
