@@ -1,0 +1,23 @@
+.article-navigation-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-arrow {
+    cursor: pointer;
+    height: 34px;
+    width: 34px;
+    border-radius: 17px;
+    transform: scale(1.3);
+    transition-duration: 200ms;
+}
+
+.navigation-arrow:hover {
+    background-color: black;
+    color: white;
+}
+
+.icon {
+    font-size: 34px;
+    padding-right: 15px;
+}

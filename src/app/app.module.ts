@@ -17,6 +17,7 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleCardComponent } from './articles-list/article-card/article-card.component';
 import { GenericArticleComponent } from './articles-list/generic-article/generic-article.component';
+import { ArticleNavigationComponent } from './articles-list/article-navigation/article-navigation.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GenericArticleComponent } from './articles-list/generic-article/generic
     PageFooterComponent,
     AboutComponent,
     ArticleCardComponent,
-    GenericArticleComponent
+    GenericArticleComponent,
+    ArticleNavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -5,9 +5,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 15px 30px;
+    margin: 15px 0;
     @media screen and (max-width: $mobile-large) {
-        margin: 10px 15px;
+        margin: 10px 0;
     }
 }
 
