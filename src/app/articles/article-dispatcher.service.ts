@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Observable, from } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Article } from './article.model';
 
 import * as articlesContents from "./contents.json"
@@ -38,7 +38,6 @@ export class ArticleDispatcherService {
   }
 
   articleOpenedFromUrl(url: string) {
-    console.log(url);
     this.indexOfCurrentArticle = this.computeIndexOfArticle(url);
     this.computeArticleObservables(this.articles[this.indexOfCurrentArticle]);
   }
