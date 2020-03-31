@@ -1,2 +1,2 @@
-<app-article-navigation></app-article-navigation>
-<app-under-construction></app-under-construction>
+<app-article-navigation (articleRequested)="onArticleRequested($event)"></app-article-navigation>
+<app-article-content [article]="article"></app-article-content>

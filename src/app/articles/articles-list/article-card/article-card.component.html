@@ -1,4 +1,4 @@
-<mat-card class="card-container" routerLink="{{article.routerLink}}">
+<mat-card class="card-container" (click)="openArticle()">
     <img mat-card-image src="{{article.imageUrl}}">
     <mat-card-title>{{article.title}}</mat-card-title>
     <mat-card-subtitle class="subTitle">{{article.subTitle}}</mat-card-subtitle>

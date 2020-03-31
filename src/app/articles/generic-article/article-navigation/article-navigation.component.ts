@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { ArticleNavigationRequestType } from '../generic-article.component';
 
 @Component({
   selector: 'app-article-navigation',
@@ -7,14 +8,16 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ArticleNavigationComponent {
 
+  @Output() articleRequested = new EventEmitter<ArticleNavigationRequestType>();
+
   constructor() { }
 
   goToPreviousArticle() {
-
+    this.articleRequested.emit(ArticleNavigationRequestType.previous);
   }
 
   goToNextArticle() {
-
+    this.articleRequested.emit(ArticleNavigationRequestType.next);
   }
 
 }

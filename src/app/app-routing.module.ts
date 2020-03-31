@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
-import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { ArticlesListComponent } from './articles/articles-list/articles-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
 import { GenericArticleComponent } from './articles/generic-article/generic-article.component';
