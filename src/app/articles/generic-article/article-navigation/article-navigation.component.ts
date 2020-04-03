@@ -1,10 +1,11 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ArticleNavigationRequestType } from '../generic-article.component';
 
 @Component({
   selector: 'app-article-navigation',
   templateUrl: './article-navigation.component.html',
-  styleUrls: ['./article-navigation.component.scss']
+  styleUrls: ['./article-navigation.component.scss',],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ArticleNavigationComponent {
 
