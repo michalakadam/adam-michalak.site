@@ -1,2 +1,11 @@
-<app-article-navigation (articleRequested)="onArticleRequested($event)"></app-article-navigation>
-<app-article-content [article]="article"></app-article-content>
+<div class="article-container">
+    <div class="article-navigation-container">
+        <div class="navigation-arrow" matTooltip="go to previous article" matTooltipClass="tooltip" matTooltipPosition="after" (click)="goToPreviousArticle()">
+            <mat-icon class="icon" aria-hidden="false" aria-label="Go to previous article">arrow_back</mat-icon>
+        </div>
+        <div class="title">{{article.title}}</div>
+        <div class="navigation-arrow" matTooltip="go to next article" matTooltipClass="tooltip" matTooltipPosition="before" (click)="goToNextArticle()">
+            <mat-icon class="icon" aria-hidden="false" aria-label="Go to next article">arrow_forward</mat-icon>
+        </div>
+    </div>
+</div>

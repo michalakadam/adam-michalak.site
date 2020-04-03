@@ -17,7 +17,6 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleCardComponent } from './articles/articles-list/article-card/article-card.component';
 import { GenericArticleComponent } from './articles/generic-article/generic-article.component';
-import { ArticleNavigationComponent } from './articles/generic-article/article-navigation/article-navigation.component';
 import { ArticleContentComponent } from './articles/generic-article/article-content/article-content.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
@@ -34,7 +33,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     AboutComponent,
     ArticleCardComponent,
     GenericArticleComponent,
-    ArticleNavigationComponent,
     ArticleContentComponent,
   ],
   imports: [

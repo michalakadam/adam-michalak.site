@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Article } from '../article.model';
 import { ArticleDispatcherService } from '../article-dispatcher.service';
 import { Router } from '@angular/router';
 
-export enum ArticleNavigationRequestType {
-  previous,
-  next,
-}
 
 @Component({
   selector: 'app-generic-article',
   templateUrl: './generic-article.component.html',
-  styleUrls: ['./generic-article.component.scss']
+  styleUrls: ['./generic-article.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class GenericArticleComponent implements OnInit {
 
@@ -29,15 +26,15 @@ export class GenericArticleComponent implements OnInit {
     this.articleDispatcherService.currentArticle$
       .subscribe(article => this.article = article);
   }
- 
-  onArticleRequested(requestedArticle: ArticleNavigationRequestType) {
-    if (requestedArticle === ArticleNavigationRequestType.previous) {
-      this.articleDispatcherService.previousArticle$
+
+  goToPreviousArticle() {
+    this.articleDispatcherService.previousArticle$
         .subscribe(article => this.navigateToRequestedArticle(article));
-    } else if (requestedArticle === ArticleNavigationRequestType.next) {
-      this.articleDispatcherService.nextArticle$
+  }
+
+  goToNextArticle() {
+    this.articleDispatcherService.nextArticle$
         .subscribe(article => this.navigateToRequestedArticle(article));
-    }
   }
 
   private navigateToRequestedArticle(article: Article) {
