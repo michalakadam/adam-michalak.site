@@ -1,12 +1,22 @@
+@import "~src/variables.scss";
+
 .card-container {
     text-align: left;
+    @media screen and (max-width: $mobile) {
+        width: 350px;
+    }
 }
 
 .card-image {
     margin-bottom: 15px;
     max-height: 180px;
     opacity: 75%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+img {
+    min-width: 450px;
 }
 
 .subTitle {
