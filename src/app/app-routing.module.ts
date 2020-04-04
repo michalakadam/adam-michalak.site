@@ -20,18 +20,6 @@ const routes: Routes = [
         component: ArticlesListComponent
       },
       {
-        path: 'deploy-angular-webapp',
-        component: GenericArticleComponent
-      },
-      {
-        path: 'html-in-email',
-        component: GenericArticleComponent
-      },
-      {
-        path: 'extreme-temperatures',
-        component: GenericArticleComponent
-      },
-      {
         path: 'github-code-reviews',
         component: GenericArticleComponent
       },
