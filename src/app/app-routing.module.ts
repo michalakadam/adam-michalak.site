@@ -32,7 +32,7 @@ const routes: Routes = [
         component: GenericArticleComponent
       },
       {
-        path: 'ultimate-breakfast',
+        path: 'github-code-reviews',
         component: GenericArticleComponent
       },
     ]
