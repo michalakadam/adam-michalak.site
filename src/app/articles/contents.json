@@ -1,7 +1,7 @@
 {
     "contents": [
         {
-            "imageUrl": "https://i.imgur.com/xBAJtKV.jpg",
+            "imageUrl": "https://i.imgur.com/40SiyIE.jpg",
             "title": "Code reviews on GitHub",
             "subTitle": "Submit code to GitHub in reviewer-friendly way.",
             "routerLink": "/articles/github-code-reviews"

@@ -20,7 +20,7 @@
         },
         {
             "imageUrl": "https://i.imgur.com/xBAJtKV.jpg",
-            "title": "Code reviews on GitHub 101",
+            "title": "Code reviews on GitHub",
             "subTitle": "Submit code to GitHub in a reviewer-friendly way.",
             "routerLink": "/articles/github-code-reviews"
         }
