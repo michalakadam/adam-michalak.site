@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class ArticlesListComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
-  private articles: Article[] = new Array<Article>();
+  articles: Article[];
   
   constructor(private articleDispatcherService: ArticleDispatcherService) { }
 
