@@ -4,7 +4,7 @@
     margin: 50px auto 0;
     max-width: 1200px;
     @media screen and (max-width: $tablet) {
-        margin: 0;
+        margin-top: 20px;
     }
 }
 
@@ -50,14 +50,18 @@
 .title {
     font-size: 36px;
     font-weight: 600;
-    margin: 0 15px 20px;
+    margin: 0 15px;
     @media screen and (max-width: $tablet) {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
 .introduction {
     color:#616161;
+    margin-top: 40px;
+    @media screen and (max-width: $tablet) {
+        margin-top: 20px;
+    }
 }
 
 .article-content {
@@ -67,7 +71,7 @@
 .section-title {
     font-size: 24px;
     font-weight: 600;
-    margin-top: 50px;
+    margin-top: 40px;
     @media screen and (max-width: $tablet) {
         font-size: 16px;
         margin-top: 20px;
@@ -79,4 +83,9 @@
     @media screen and (max-width: $tablet) {
         font-size: 14px;
     }
+}
+
+a {
+    color: #d32f2f;
+    text-decoration: none;
 }
