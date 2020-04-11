@@ -10,7 +10,7 @@
         {
             "selector": "automation-with-scripts",
             "title": "Scripts for productivity",
-            "subTitle": "On benefits of automation of everyday tasks.",
+            "subTitle": "On benefits of automation of repetitive tasks.",
             "routerLink": "/articles/automation-with-scripts",
             "imageUrl": "https://i.imgur.com/MMvnzKH.jpg"
         }
