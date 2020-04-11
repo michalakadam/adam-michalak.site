@@ -2,15 +2,11 @@
 
 .card-container {
     text-align: left;
-    @media screen and (max-width: $mobile) {
-        width: 350px;
-    }
 }
 
 .card-image {
     margin-bottom: 15px;
     max-height: 180px;
-    opacity: 75%;
     overflow-x: hidden;
     overflow-y: hidden;
 }

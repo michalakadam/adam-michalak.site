@@ -23,6 +23,10 @@ const routes: Routes = [
         path: 'github-code-reviews',
         component: GenericArticleComponent
       },
+      {
+        path: 'automation-with-scripts',
+        component: GenericArticleComponent
+      },
     ]
   },
   {
