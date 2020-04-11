@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article } from './article.model';
 
-import * as articlesContents from "./contents.json"
+import * as articlesContents from "./articles.json"
 
 @Injectable({
   providedIn: 'root',

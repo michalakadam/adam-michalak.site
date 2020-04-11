@@ -1,0 +1,31 @@
+@import "~src/variables.scss";
+
+.introduction {
+    color:#616161;
+    margin-top: 40px;
+    @media screen and (max-width: $tablet) {
+        margin-top: 20px;
+    }
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+    @media screen and (max-width: $tablet) {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+.section-content {
+    font-size: 18px;
+    @media screen and (max-width: $tablet) {
+        font-size: 14px;
+    }
+}
+
+a {
+    color: #d32f2f;
+    text-decoration: none;
+}
