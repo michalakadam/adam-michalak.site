@@ -8,6 +8,9 @@
     @media screen and (max-width: $mobile-large) {
         margin: 20px 3%;
     }
+    @media screen and (max-width: $mobile) {
+        margin: 20px 0;;
+    }
 }
 
 .grid-container {

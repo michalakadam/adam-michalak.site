@@ -12,6 +12,9 @@ body {
     @media screen and (max-width: $mobile-large) {
         margin: 0 15px;
     }
+    @media screen and (max-width: $mobile) {
+        margin: 0 10px;
+    }
 }
 
 div {
