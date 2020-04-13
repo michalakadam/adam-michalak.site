@@ -29,3 +29,17 @@ a {
     color: #d32f2f;
     text-decoration: none;
 }
+
+code {
+    color: #616161;
+    font-size: 17px;
+    @media screen and (max-width: $tablet) {
+        font-size: 13px;
+    }
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

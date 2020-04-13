@@ -14,13 +14,12 @@
             Imagine that you are developing a product that is used by thousands of users. Many of them are requesting a new feature and you decide to
             provide it to them. You start coding and <a href="https://crealytics.com/blog/5-reasons-keeping-git-commits-small/" target="_blank">commit
             frequently</a>. Soon frustrated users start reaching out to you saying that the program stopped working correctly. What happened? You committed
-            changes to a production branch (master) and pushed them to the remote repo. One anditode to this problem might be to develop feature locally on your machine and push only when it is fully functional. However, imagine that users started reporting a serious bug in your product when the feature you are working on is half done... Should you get rid of all the code you have written so far and start working on a bug instead?
+            changes to a production branch (master) and pushed them to the remote repo. An anditode to this problem might be to develop feature locally on your machine and push only when it is fully functional. However, imagine that users started reporting a serious bug in your product when the feature you are working on is half done... Should you get rid of all the code you have written so far and start working on a bug instead?
         </p>
         <p>
-            Fortunately git enables splitting project into easy-to-manage branches. How to use it effectively? First step is to make a commitment to
-            keep master branch pristine. Treat master as a holy branch, reserved for fully-functional, production-ready and reviewed code. Let's see how to apply this strategy from the very beginning. Create a new project and add all the boilerplate files (like .gitignore, pom.xml, etc.) manually or
-            <a href="https://github.com/michalakadam/Java-project-initializr" target="_blank">use a script to do it for you</a>. Check if everything
-            is working correctly by compiling and executing whatever code you have. If there is no error thrown, it is the right time to do <i>git commit -m "initial commit"</i>. Now before you write a single line of code switch to "development" branch (<i>git checkout -b development</i>). This is a place for half-broken and/or not fully-developed code. Add commits to it until your app is working again. Push both master and development branches to a remote repository on GitHub. It is the right time to ask for a code review!
+            Fortunately git enables splitting project into easy-to-manage <i>branches</i>. How to use this feature effectively? First step is to make a commitment to keep master branch pristine.<strong>Treat master as a holy branch, reserved for fully-functional, production-ready and reviewed code.</strong>
+        <p>
+            Let's see how to apply this strategy from the very moment project begins. Create a new folder, initialize git repository with <code>git init</code> and add all the boilerplate files (like .gitignore, pom.xml, etc.) manually or <a href="https://github.com/michalakadam/Java-project-initializr" target="_blank">use a script to do it for you</a>. Check if everything is working correctly by compiling and executing whatever code you have. If there is no error thrown, it is the right time for <code>git commit -m "initial commit"</code>. Now before you write a single line of code, switch to a new "development" branch with <code>git checkout -b development</code>. This is a place for a half-broken and/or not fully-developed code. Add commits to it until your app is working again. Push both master and development branches to a remote repository on GitHub. It is the right time to ask for a code review!
         </p>
     </div>
     <div class="section-title">
@@ -28,10 +27,22 @@
     </div>
     <div class="section-content">
         <p>
-            Pull request is a way to make reviewer's life easier. It presents changes committed to a given branch in a user-friendly way. Thanks to that reviewer can directly point to the place in code where correction is needed. Pull request provides tools for initiating a meaningful discussion that can lead to implementation of better solutions. Last but not least it supports holy state of master branch by not allowing merge until reviewer accepts all the changes that are under scrutiny.
+            Pull request is a GitHub feature that makes code reviews efficent. It presents changes committed to a given branch in a user-friendly way. Thanks to that reviewer can directly point to a place in the code where correction is needed. Pull request provides tools for initiating a meaningful discussion that can lead to implementation of better solutions. Last but not least it supports holy state of master branch by not allowing merger until reviewer accepts all changes that are under scrutiny.
         </p>
         <p>
-            Let's see how to create a pull request from scratch. If you followed steps from the previous paragraph, open repository page on GitHub. Click on the "New pull request" button that is located right above list of files. Select master as a base branch and development as a branch that will be compared. After clicking "Create pull request" button you will be redirected to pull request page. It is not very much useful though because you have to grant a permission for a reviewer to see code you created. To do that go to repo settings page, select "Manage access" section and invite a reviewer of your choice. Now go back to the pull request you created and assign that person as a reviewer of your changes (see "Reviewers" section on the right hand side). If you encounter any problem along the way, check <a href="https://yangsu.github.io/pull-request-tutorial/" target="_blank">this visual guide</a> for a more detailed instruction.
+            Let's see how to create a pull request from scratch. If you followed steps from the previous paragraph, open repository page on GitHub. First of all grant a permission for a reviewer to see code you created. To do that go to the repository settings page, select "Manage access" section and invite a reviewer of your choice. Then navigate to "Code" tab of the repository and click on the "New pull request" button that is located right above the list of files. Select master as a base branch and development as a branch that will be compared. After clicking "Create pull request" button you will be redirected to a pull request page. Locate "Reviewers" section on the right hand side and assign a reviewer. If you encounter any problem along the way, check <a href="https://yangsu.github.io/pull-request-tutorial/" target="_blank">this visual guide</a> for a more detailed instruction.
+        </p>
+    </div>
+    <div class="section-title">
+        Applying suggested changes
+    </div>
+    <div class="section-content">
+        <p>
+            After review is completed you might see a screen like this:
+        </p>
+        <img src="https://i.imgur.com/m7nGgX9.png">
+        <p>
+            At this point you might wonder how to address changes that reviewer requested. It is not possible to change commits that are pushed to remote repository and reverting remote changes may result in an unexpected behavior and wipe out reviewer's comments. Just create a new commit addressing changes requested by the reviewer and push it to the reviewed branch. They will appear in the pull request and the reviewer will be able to take a look at your code once more. If on the other hand you don't agree with the review, first of all make sure that you are not <a href="https://www.themuse.com/advice/7-tips-thatll-help-you-stop-taking-criticism-so-personally-and-make-it-easier-to-move-on">taking feedback too personally</a>. Then form your response in the most polite way you can think of. Foster a discussion by presenting your point clearly. Remember that saying to anybody that they are plain wrong will only antagonize them and make coming up with the best solution impossible. It is also the easiest way to make sure that a given reviewer will never take a look at your code again.  
         </p>
     </div>
     <div class="section-title">
@@ -39,7 +50,7 @@
     </div>
     <div class="section-content">
         <p>
-            If you want to get your code reviewed, use holy master branching strategy combined with GitHub's pull request feature. Develop new code on a separate branch and merge it only when reviewer accepts it. Get your code reviewed frequently to accelerate your learning. If you don't know any experienced developers, post your GitHub repository <a href="https://codereview.stackexchange.com/" target="_blank">here</a> or <a href="https://github.com/michalakadam?tab=repositories" target="_blank">write to me</a>. If you want to learn more, read about a <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">successful branching model</a>. 
+            If you want to get your code reviewed, use holy master branching strategy combined with GitHub's pull request feature. Develop new code on a separate branch and merge it only when reviewer accepts it. If reviewer requests changes, address them with a new commit. Get your code reviewed frequently to accelerate your learning. If you don't know any experienced developers that could review your code, post your GitHub repository <a href="https://codereview.stackexchange.com/" target="_blank">here</a> or <a href="https://github.com/michalakadam?tab=repositories" target="_blank">write to me</a>. If you want to learn more, check <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests" target="_blank">official github documentation on pull requests</a> or read about <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">a successful branching model</a>. 
         </p>
     </div>
 </div>
