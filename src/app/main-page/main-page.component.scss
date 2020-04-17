@@ -6,12 +6,9 @@
     align-items: center;
     justify-content: center;
     --delay: 100ms;
-    @media screen and (max-width: $desktop) {
-        margin-top: 80px;
-    }
     @media screen and (max-width: $mobile-large) {
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 80px;
     }
 }
 
@@ -27,7 +24,7 @@
     font-size: 44px;
     font-weight: bold;
     line-height: 1.5em;
-    @media screen and (max-width: $mobile-large) {
+    @media screen and (max-width: $mobile) {
         font-size: 28px;
     }
 }
@@ -60,9 +57,11 @@
     width: 100px;
     margin: 5px 0;
     @media screen and (max-width: $mobile-large) {
+        margin: 0 10px;
+    }
+    @media screen and (max-width: $mobile) {
         height: 75px;
         width: 75px;
-        margin: 0 10px;
     }
 }
 
@@ -93,8 +92,8 @@
 .stack-container:hover .stack-label,
 .stack-container:active .stack-label {
     opacity: 1;
-    transition: 2.4s;
-    -webkit-transition: 2.4s;
+    transition: 3.6s;
+    -webkit-transition: 3.6s;
 }
 
 @keyframes entranceAnimation {
