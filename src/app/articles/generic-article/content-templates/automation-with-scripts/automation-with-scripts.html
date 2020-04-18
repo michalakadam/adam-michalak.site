@@ -1,54 +1,49 @@
 <div class="article-content">
     <div class="introduction section-content">
-
+        Programmer is a craftsman who combines commands into programs that can be interpreted by a computer and executed repeatedly. Every program is an attempt to delegate execution of tasks that could otherwise be done manually. Delegation requires up-front investement of time and effort. However, it pays off in spades. In this article I would like to motivate you to bring your programming skills to the next level and start delegating repetitive shell tasks with scripts. I am not going to give you any hows. Once you are convinced you want to acquire a powerful skill of scripting, check <a href="https://ryanstutorials.net/bash-scripting-tutorial/" target="blank_">this excellent Bash 101 tutorial</a>. For now let's focus on the reasons for writing and using shell scripts.
     </div>
-    <div class="section-title">
+    <div class="section-title" id="scripts-save-time">
         Save time with each run
     </div>
     <div class="section-content">
-       
+        <p>
+            Investigate the way you use command line and identify sequences of instructions that you use repeatedly. All of those that are longer than one command are worth turning into a script. I know that at first it does not seem like a good investment. However, the more proficient you will get at scripting, the bigger return will come with every script. Let's take a look at one of my most recent creations to illustrate that. This website is served from a remote server without use of any web hosting services. This means that I have to take care about deployment process. Here are the steps that need to be performed to deploy each change to a hosting server: 
+        </p>
+        <ul>
+            <li>Local change is pushed to a remote GitHub repository.</li>
+            <li>Remote server is informed about it.</li>
+            <li>Change is pulled from a remote repo to the server.</li>
+            <li>Website is built on the server with Angular CLI.</li>
+            <li>Compiled files are copied to a folder with website files.</li>
+            <li>Application hosting website (nginx) is restarted.</li>
+        </ul>
+        <p>
+            Whole operation takes 3-4 minutes and is composed of about 15 commands. It is certainly enough to keep me from deploying to production frequently which is not very agile... Therefore I spent several hours on writing <a href="https://github.com/michalakadam/angular-build-deploy-tool" target="blank_">script that does it for me</a> before I wrote a single line of code for this website. Did it pay off? Hell yeah! I deploy to production regularly every time I create a new feature - up to several times a day.
+        </p>
     </div>
-    <div class="section-title">
+    <div class="section-title" id="scripts-are-free-from-errors">
         Err no more
     </div>
     <div class="section-content">
-        
+        <p>
+            Shell scripts are a great way to store complex sequence of commands. For example there is a lot of boiler plate files that have to be added when starting a new Java project. Readme.md, pom.xml, .gitignore not to mention custom git hooks and folder structure with main class. It's lot of typing, copying, pasting. This sequence has to be remembered and rerun everytime. Probability of making an error by mistyping or forgeting something is quite high.
+        </p>
+        <div class="image-container">
+            <img src="https://i.imgur.com/q62JhCy.png">
+            <div class="image-title">
+                Initial Java project structure is quite verbose.
+            </div>
+        </div>
+        <p>
+            Every step of project's structure creation can be performed from the command line. For example generation of folder structure that follow Maven standard directory layout can be performed with just one command. Put all those instructions in a sequence, save it into a file with .sh extension,  <a href="https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/" target="blank_">make it executable</a> and you are all set. <a href="https://github.com/michalakadam/Java-project-initializr" target="blank_">Here</a> is an example of a fully functional script that initializes Java project structure automatically.
+        </p>
     </div>
-    <div class="section-title">
+    <div class="section-title" id="scripts-are-portable">
         Use across unix systems
     </div>
     <div class="section-content">
-        
-    </div>
-    <div class="section-title">
-        Document complex command sequence
-    </div>
-    <div class="section-content">
-        
-    </div>
-    <div class="section-title">
-        Examples of useful scripts
-    </div>
-    <div class="section-content">
-        <ul>
-            <li>
-                <strong>Java project initialization</strong>
-            </li>
-            <p>
-
-            </p>
-            <li>
-                <strong>Angular webapp deployment</strong>
-            </li>
-            <p>
-
-            </p>
-            <li>
-                <strong>Essential executables installation on a freshly installed Debian</strong>
-            </li>
-            <p>
-
-            </p>
-        </ul>
+        <p>
+            Great thing about scripts is that they are platform agnostic. They can be executed on any <a href="https://www.youtube.com/watch?v=jowCUo_UGts" target="blank_">Unix-based system</a> like Linux and MacOS but also Windows (wtf, did I just said that?!) thanks to the recent <a href="https://www.youtube.com/watch?v=-atblwgc63E" target="blank_">WSL feature</a>. This makes script writing a one-time effort. Once you spend time creating a script, it will serve you forever. You can take it to the next level: create a script that downloads your scripts from cloud storage of any sorts and installs all the necessary executables after a launch of a brand new operating system. A working example can be found <a href="https://github.com/michalakadam/debian_essentials" target="blank_">here</a>.
+        </p>
     </div>
 </div>
