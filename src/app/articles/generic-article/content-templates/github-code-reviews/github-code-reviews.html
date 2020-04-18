@@ -40,7 +40,12 @@
         <p>
             After review is completed you might see a screen like this:
         </p>
-        <img src="https://i.imgur.com/m7nGgX9.png">
+        <div class="image-container">
+            <img src="https://i.imgur.com/m7nGgX9.png">
+            <div class="image-title">
+                There is still work to be done on this pull request.
+            </div>
+        </div>
         <p>
             At this point you might wonder how to address changes that reviewer requested. It is not possible to change commits that are pushed to remote repository and reverting remote changes may result in an unexpected behavior and wipe out reviewer's comments. Just create a new commit addressing changes requested by the reviewer and push it to the reviewed branch. They will appear in the pull request and the reviewer will be able to take a look at your code once more.
         </p>
