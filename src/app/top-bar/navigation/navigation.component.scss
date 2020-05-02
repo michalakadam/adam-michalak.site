@@ -21,6 +21,9 @@ div {
     @media screen and (max-width: $mobile-large) {
         margin-right: 15px;
     }
+    @media screen and (max-width: $mobile) {
+        margin-right: 10px;
+    }
 }
 
 .active {
@@ -50,5 +53,8 @@ img:hover {
     margin-right: 20px;
     @media screen and (max-width: $mobile-large) {
         margin-right: 15px;
+    }
+    @media screen and (max-width: $mobile) {
+        margin-right: 10px;
     }
 }
