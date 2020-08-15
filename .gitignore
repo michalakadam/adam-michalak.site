@@ -48,3 +48,4 @@ Thumbs.db
 #files related to Angular project deployment
 deployment_script_config
 deploy.sh
+pull_and_build.sh
