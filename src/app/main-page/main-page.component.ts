@@ -24,7 +24,7 @@ export class MainPageComponent {
 
   private pickDescription(): void {
     if (this.invocationNumber % 3 === 0) {
-      this.description = "highly-driven";
+      this.description = "highly driven";
     } else if (this.invocationNumber % 3 === 1) {
       this.description =  "continously growing";
     } else {
