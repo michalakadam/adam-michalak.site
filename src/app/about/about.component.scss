@@ -26,9 +26,8 @@
 .title {
     font-size: 64px;
     font-weight: 600;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0.7em;
+    padding-bottom: 5px;
+    padding-top: 10px;
     @media screen and (max-width: 1700px) {
         font-size: 56px;
         line-height: 42px;
