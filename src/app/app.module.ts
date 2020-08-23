@@ -19,6 +19,7 @@ import { ArticleCardComponent } from './articles/articles-list/article-card/arti
 import { GenericArticleComponent } from './articles/generic-article/generic-article.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ContentTemplatesModule } from './articles/generic-article/content-templates/content-templates.module';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ContentTemplatesModule } from './articles/generic-article/content-templ
     HttpClientModule,
     MatTooltipModule,
     ContentTemplatesModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

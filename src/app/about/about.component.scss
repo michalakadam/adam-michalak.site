@@ -4,15 +4,15 @@
     display: flex;
     flex-direction: row;
     text-align: left;
-    margin: 100px 10%;
+    margin: 100px 10% 0;
     @media screen and (max-width: $desktop-large) {
-        margin: 70px 5%;
+        margin: 70px 5% 0;
     }
     @media screen and (max-width: $desktop) {
         flex-direction: column;
     }
     @media screen and (max-width: $mobile-large) {
-        margin: 20px 3%;
+        margin: 20px 3% 0;
     }
 }
 
@@ -24,26 +24,20 @@
 }
 
 .title {
-    font-size: 64px;
+    font-size: 62px;
     font-weight: 600;
-    padding-bottom: 5px;
     padding-top: 10px;
     @media screen and (max-width: 1700px) {
-        font-size: 56px;
-        line-height: 42px;
+        font-size: 54px;
     }
     @media screen and (max-width: $desktop-large) {
-        font-size: 48px;
-        line-height: 36px;
+        font-size: 42px;
     }
     @media screen and (max-width: $desktop-medium) {
-        font-size: 36px;
-        line-height: 27px;
+        font-size: 34px;
     }
-
     @media screen and (max-width: $mobile-large) {
-        font-size: 28px;
-        line-height: 21px;
+        font-size: 26px;
     }
 }
 
@@ -62,4 +56,14 @@
 #horizontal-pic {
     max-width: 100%;
     height: auto;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    height: 40px;
+    width: 160px;
+    margin: 75px 0;
 }
