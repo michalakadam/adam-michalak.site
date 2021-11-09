@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article } from './article.model';
 
-import * as articlesContents from "./articles.json"
+import { contents as articlesContents } from "./articles.json"
 
 @Injectable({
   providedIn: 'root',
@@ -30,7 +30,7 @@ export class ArticleDispatcherService {
 
   private getArticlesFromJson(): Article[] {
     const articles: Article[] = new Array<Article>();
-    articlesContents.contents.forEach(article => {
+    articlesContents.forEach(article => {
       articles.push(article);
     });
     this.articles = articles;
