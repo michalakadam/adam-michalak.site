@@ -49,3 +49,6 @@ Thumbs.db
 deployment_script_config
 deploy.sh
 pull_and_build.sh
+
+#angular cache
+.angular/
