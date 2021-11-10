@@ -1,5 +1,14 @@
 <div class="navigation-container">
     <div class="navigation-link"
+        [routerLink]="['/about']" 
+        routerLinkActive="active"
+        tabindex="0"
+        role="button"
+        aria-pressed="false">
+        about
+    </div> 
+
+    <div class="navigation-link"
         [routerLink]="['/articles']"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}"
@@ -8,15 +17,6 @@
         aria-pressed="false">
         articles
     </div>
-
-    <div class="navigation-link"
-        [routerLink]="['/about']" 
-        routerLinkActive="active"
-        tabindex="0"
-        role="button"
-        aria-pressed="false">
-        about
-    </div> 
 
     <a href="https://github.com/michalakadam" target="_blank">
         <img id="github-icon" src="https://i.imgur.com/RdN8sOW.png">
