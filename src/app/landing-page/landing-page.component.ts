@@ -9,12 +9,12 @@ export const fadeOut = trigger('fadeOut', [
 ]);
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss'],
+  selector: 'app-landing-page',
+  templateUrl: './landing-page.component.html',
+  styleUrls: ['./landing-page.component.scss'],
   animations: [fadeOut],
 })
-export class MainPageComponent {
+export class LandingPageComponent {
  
   description = "self-taught";
   private invocationNumber = 0;
