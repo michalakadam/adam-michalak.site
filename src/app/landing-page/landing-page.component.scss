@@ -2,98 +2,94 @@
 
 .page-container {
     display: flex;
+    flex-direction: column;
     margin-top: 150px;
     align-items: center;
     justify-content: center;
     --delay: 100ms;
     @media screen and (max-width: $mobile-large) {
-        flex-direction: column;
         margin-top: 80px;
     }
-}
 
-.text {
-    margin: 0 50px;
-    text-align: left;
-    @media screen and (max-width: $desktop) {
-        margin: 0;
+    .text {
+        margin: 0 50px;
+        text-align: left;
+        @media screen and (max-width: $desktop) {
+            margin: 0;
+        }
+
+        .title {
+            font-size: 44px;
+            font-weight: bold;
+            line-height: 1.5em;
+            @media screen and (max-width: $mobile) {
+                font-size: 28px;
+            }
+        }
     }
-}
 
-.title {
-    font-size: 44px;
-    font-weight: bold;
-    line-height: 1.5em;
-    @media screen and (max-width: $mobile) {
-        font-size: 28px;
+    .stack {
+        display: flex;
+        justify-content: center;
+
+        .stack-container {
+            display: grid;
+
+            & > * {
+                grid-row: 1;
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:hover, &:active {
+                .stack-image {
+                    transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    opacity: 0;
+                } 
+
+                .stack-label {
+                    opacity: 1;
+                }
+            }
+
+            .stack-image {
+                height: 100px;
+                width: 100px;
+                margin: 5px 0;
+                animation: entranceAnimation 700ms ease-out;
+                animation-fill-mode: backwards;
+                transition-duration: 1.2s;
+                -webkit-transition-duration: 1.2s;
+                @media screen and (max-width: $mobile-large) {
+                    margin: 0 10px;
+                }
+                @media screen and (max-width: $mobile) {
+                    height: 75px;
+                    width: 75px;
+                }
+            }
+
+            .stack-label {
+                font-family: 'VT323', monospace;
+                font-size: 44px;
+                height: 100px;
+                width: 100px;
+                margin: 5px 0;
+                opacity: 0;
+                transition-duration: 3.6s;
+                -webkit-transition-duration: 3.6s;
+                @media screen and (max-width: $mobile-large) {
+                    font-size: 28px;
+                    height: 75px;
+                    width: 75px;
+                    margin: 0 10px;
+                }
+            }
+        }
     }
-}
-
-.stack {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media screen and (max-width: $mobile-large) {
-        flex-direction: row;
-    }
-}
-
-.stack-container {
-    display: grid;
-}
-
-.stack-container > * {
-    grid-row: 1;
-    grid-column: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.stack-image {
-    height: 100px;
-    width: 100px;
-    margin: 5px 0;
-    animation: entranceAnimation 700ms ease-out;
-    animation-fill-mode: backwards;
-    transition-duration: 1.2s;
-    -webkit-transition-duration: 1.2s;
-    @media screen and (max-width: $mobile-large) {
-        margin: 0 10px;
-    }
-    @media screen and (max-width: $mobile) {
-        height: 75px;
-        width: 75px;
-    }
-}
-
-.stack-container:hover .stack-image,
-.stack-container:active .stack-image {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    opacity: 0;
-} 
-
-.stack-label {
-    font-family: 'VT323', monospace;
-    font-size: 44px;
-    height: 100px;
-    width: 100px;
-    margin: 5px 0;
-    opacity: 0;
-    transition-duration: 3.6s;
-    -webkit-transition-duration: 3.6s;
-    @media screen and (max-width: $mobile-large) {
-        font-size: 28px;
-        height: 75px;
-        width: 75px;
-        margin: 0 10px;
-    }
-}
-
-.stack-container:hover .stack-label,
-.stack-container:active .stack-label {
-    opacity: 1;
 }
 
 @keyframes entranceAnimation {
