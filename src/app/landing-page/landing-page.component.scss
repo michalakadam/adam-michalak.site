@@ -51,11 +51,13 @@
 }
 
 .stack-image {
-    animation: entranceAnimation 700ms ease-out;
-    animation-fill-mode: backwards;
     height: 100px;
     width: 100px;
     margin: 5px 0;
+    animation: entranceAnimation 700ms ease-out;
+    animation-fill-mode: backwards;
+    transition-duration: 1.2s;
+    -webkit-transition-duration: 1.2s;
     @media screen and (max-width: $mobile-large) {
         margin: 0 10px;
     }
@@ -70,8 +72,6 @@
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     opacity: 0;
-    transition: 1.2s;
-    -webkit-transition: 1.2s;
 } 
 
 .stack-label {
@@ -81,6 +81,8 @@
     width: 100px;
     margin: 5px 0;
     opacity: 0;
+    transition-duration: 3.6s;
+    -webkit-transition-duration: 3.6s;
     @media screen and (max-width: $mobile-large) {
         font-size: 28px;
         height: 75px;
@@ -92,8 +94,6 @@
 .stack-container:hover .stack-label,
 .stack-container:active .stack-label {
     opacity: 1;
-    transition: 3.6s;
-    -webkit-transition: 3.6s;
 }
 
 @keyframes entranceAnimation {
