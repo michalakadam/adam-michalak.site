@@ -12,23 +12,24 @@ const routes: Routes = [
     path: '',
     component: LandingPageComponent,
   },
-  {
-    path: 'articles',
-    children: [
-      {
-        path: '',
-        component: ArticlesListComponent,
-      },
-      {
-        path: 'github-code-reviews',
-        component: GenericArticleComponent,
-      },
-      {
-        path: 'automation-with-scripts',
-        component: GenericArticleComponent,
-      },
-    ],
-  },
+  // TODO: bring back when more articles are available
+  // {
+  //   path: 'articles',
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: ArticlesListComponent,
+  //     },
+  //     {
+  //       path: 'github-code-reviews',
+  //       component: GenericArticleComponent,
+  //     },
+  //     {
+  //       path: 'automation-with-scripts',
+  //       component: GenericArticleComponent,
+  //     },
+  //   ],
+  // },
   {
     path: 'about',
     component: AboutComponent,
