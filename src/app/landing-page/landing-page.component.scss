@@ -2,12 +2,12 @@
 
 .page-container {
     display: flex;
-    flex-direction: column;
     margin-top: 150px;
     align-items: center;
     justify-content: center;
     --delay: 100ms;
     @media screen and (max-width: $mobile-large) {
+        flex-direction: column;
         margin-top: 80px;
     }
 
@@ -30,7 +30,11 @@
 
     .stack {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        @media screen and (max-width: $mobile-large) {
+            flex-direction: row;
+        }
 
         .stack-container {
             display: grid;
@@ -69,6 +73,25 @@
                 @media screen and (max-width: $mobile) {
                     height: 75px;
                     width: 75px;
+                }
+
+                &.spring {
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    height: 80px;
+                    width: 80px;
+
+                    @media screen and (max-width: $mobile) {
+                        margin-left: 15px;
+                        height: 60px;
+                        width: 60px;
+                    }
+                }
+
+                &.angular {
+                    @media screen and (max-width: $mobile-large) {
+                        margin-top: 10px;
+                    }
                 }
             }
 
