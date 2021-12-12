@@ -68,9 +68,10 @@
                 transition-duration: 1.2s;
                 -webkit-transition-duration: 1.2s;
                 @media screen and (max-width: $mobile-large) {
-                    margin: 0 10px;
+                    margin: 0 25px;
                 }
                 @media screen and (max-width: $mobile) {
+                    margin: 0 10px;
                     height: 75px;
                     width: 75px;
                 }
@@ -81,6 +82,9 @@
                     height: 80px;
                     width: 80px;
 
+                    @media screen and (max-width: $mobile-large) {
+                        margin-left: 35px;
+                    }
                     @media screen and (max-width: $mobile) {
                         margin-left: 15px;
                         height: 60px;
@@ -106,9 +110,12 @@
                 -webkit-transition-duration: 3.6s;
                 @media screen and (max-width: $mobile-large) {
                     font-size: 28px;
+                    margin: 0 25px;
+                }
+                @media screen and (max-width: $mobile) {
+                    margin: 0 10px;
                     height: 75px;
                     width: 75px;
-                    margin: 0 10px;
                 }
             }
         }
