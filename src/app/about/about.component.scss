@@ -14,48 +14,49 @@
     @media screen and (max-width: $mobile-large) {
         margin: 20px 3% 0;
     }
-}
 
-.section {
-    margin-right: 5%;
-    @media screen and (max-width: $desktop) {
-        margin-right: 0;
-    }
-}
+    .text-container {
+        margin-right: 5%;
+        @media screen and (max-width: $desktop) {
+            margin-right: 0;
+        }
 
-.title {
-    font-size: 62px;
-    font-weight: 600;
-    padding-top: 10px;
-    @media screen and (max-width: 1700px) {
-        font-size: 54px;
-    }
-    @media screen and (max-width: $desktop-large) {
-        font-size: 42px;
-    }
-    @media screen and (max-width: $desktop-medium) {
-        font-size: 34px;
-    }
-    @media screen and (max-width: $mobile-large) {
-        font-size: 26px;
-    }
-}
+        .title {
+            font-size: 62px;
+            font-weight: 600;
+            margin-bottom: 0.75em;
+            margin-top: 0.75em;
+            padding-top: 10px;
+            @media screen and (max-width: 1700px) {
+                font-size: 54px;
+            }
+            @media screen and (max-width: $desktop-large) {
+                font-size: 42px;
+            }
+            @media screen and (max-width: $desktop-medium) {
+                font-size: 34px;
+            }
+            @media screen and (max-width: $mobile-large) {
+                font-size: 26px;
+            }
+        }
 
-.paragraph {
-    margin-top: 20px;
-    text-align: justify;
-}
-
-#vertical-pic {
-    width: 350px;
-    @media screen and (max-width: 1700px) {
-        width: 300px;
+        p {
+            text-align: justify;
+        }
     }
-}
 
-#horizontal-pic {
-    max-width: 100%;
-    height: auto;
+    #vertical-pic {
+        width: 350px;
+        @media screen and (max-width: 1700px) {
+            width: 300px;
+        }
+    }
+
+    #horizontal-pic {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 button {
