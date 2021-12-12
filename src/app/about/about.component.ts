@@ -1,30 +1,25 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { fromEvent, Observable, Subscription } from "rxjs";
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { WindowSizeDetector } from '../services/window-size-detector.service';
+
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit, OnDestroy {
-  resizeObservable$: Observable<Event>;
-  resizeSubscription$: Subscription;
-  isMobileScreen: boolean;
+export class AboutComponent implements OnDestroy {
+  private subscription: Subscription;
 
-  ngOnInit() {
-      this.isMobileScreen = this.computeIsMobileScreen(window.innerWidth);
-
-      this.resizeObservable$ = fromEvent(window, 'resize');
-      this.resizeSubscription$ = this.resizeObservable$.subscribe( event => {
-        this.isMobileScreen = this.computeIsMobileScreen(window.innerWidth);
-      });
-  }
-
-  private computeIsMobileScreen(screenWidth: number) {
-    return screenWidth < 961 ? true : false;
+  constructor(readonly windowSizeDetector: WindowSizeDetector, readonly changeDetector: ChangeDetectorRef) {
+    this.subscription = this.windowSizeDetector.windowSizeChanged$.subscribe(
+      () => {
+        this.changeDetector.detectChanges();
+      }
+    );
   }
 
   ngOnDestroy() {
-    this.resizeSubscription$.unsubscribe()
+    this.subscription.unsubscribe();
   }
 }
