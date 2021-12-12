@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   @HostListener("window:resize", ["$event"])
-  onResize() {
+  onResize(event: any) {
     this.windowSizeDetector.windowSizeChanged(window.innerWidth);
   }
 }
