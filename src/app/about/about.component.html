@@ -1,7 +1,10 @@
 <div class="about-container">
-    <div *ngIf="windowSizeDetector.isMobileScreen" class="horizontal-pic-container">
-        <img id="horizontal-pic" src="https://i.imgur.com/NYNiAx3.jpg">
-    </div>
+    @if (windowSizeDetector.isMobileScreen) {
+        <div class="horizontal-pic-container">
+            <img id="horizontal-pic" src="https://i.imgur.com/NYNiAx3.jpg">
+        </div>
+    }
+
     <div class="text-container">
         <div class="title">
             Hi, my name is <span style="color: #d32f2f;">Adam</span>.
@@ -25,10 +28,14 @@
             I am pretty excited to be here. Let's change the world together, shall we? 
         </p>
     </div>
-    <div *ngIf="!windowSizeDetector.isMobileScreen" class="vertical-pic-container">
-        <img id="vertical-pic" src="https://i.imgur.com/nH62KPH.jpg">
-    </div>
-</div>
-<a href="https://adam-michalak.site/cv.pdf" download="Adam_Michalak_cv.pdf" target="_blank">
-    <button mat-raised-button>see my resume</button>
+
+    @if (!windowSizeDetector.isMobileScreen) {
+        <div class="vertical-pic-container">
+            <img id="vertical-pic" src="https://i.imgur.com/nH62KPH.jpg">
+        </div>
+    }</div>
+
+<a mat-raised-button href="https://adam-michalak.site/cv.pdf"
+   download="Adam_Michalak_cv.pdf" target="_blank" rel="noopener">
+    see my resume
 </a>
