@@ -12,6 +12,7 @@ export const fadeOut = trigger('fadeOut', [
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
+  standalone: false,
   animations: [fadeOut],
 })
 export class LandingPageComponent {

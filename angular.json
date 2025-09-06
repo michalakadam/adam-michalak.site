@@ -24,25 +24,25 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src"]
+            }
           },
           "configurations": {
             "production": {
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -61,34 +61,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mysite:build"
+            "buildTarget": "mysite:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mysite:build:production"
+              "buildTarget": "mysite:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mysite:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "buildTarget": "mysite:build"
           }
         }
       }
     }
   },
-  "defaultProject": "mysite"
+  "cli": {
+    "analytics": false
+  }
 }

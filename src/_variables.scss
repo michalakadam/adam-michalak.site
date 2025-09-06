@@ -1,5 +1,5 @@
 // Frequently used values saved as variables.
-// To use them add << @import "~src/variables.scss"; >> at scss file top.
+// To use them add << @use "variables" as *; >> at scss file top.
 
 // size screens for responsive design
 $desktop-large: 1470px;
