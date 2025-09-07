@@ -69,18 +69,39 @@
     }
 }
 
-button {
-    background-color: $text-color-light;
-    color: $bg-color-light;
+/* Light mode (default) */
+a[mat-raised-button] {
+    /* Material 3 tokens the component reads */
+    --mdc-elevated-button-container-color: black;
+    --mdc-elevated-button-label-text-color: white;
+
+    background-color: var(--mdc-elevated-button-container-color);
+    color: var(--mdc-elevated-button-label-text-color);
+
     font-size: 14px;
     font-weight: 700;
     height: 40px;
     width: 160px;
     margin: 75px 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    
-    :host-context(body.dark-mode) & {
-        background-color: $text-color-dark;
-        color: $bg-color-dark;
+
+    &:active {
+        --mdc-elevated-button-container-color: black;
+    }
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+}
+
+/* Dark mode – when <body class="dark-mode"> */
+:host-context(body.dark-mode) a[mat-raised-button] {
+    --mdc-elevated-button-container-color: white;
+    --mdc-elevated-button-label-text-color: black;
+
+    background-color: var(--mdc-elevated-button-container-color);
+    color: var(--mdc-elevated-button-label-text-color);
+
+    &:active {
+        --mdc-elevated-button-container-color: white;
     }
 }
