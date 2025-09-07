@@ -92,8 +92,8 @@ img:hover {
         height: 0;
         
         &:checked + .slider {
-            background-color: #4a4a4a;
-            
+            background-color: #fff;
+            color: #000;
             .icon.sun {
                 opacity: 0;
             }
@@ -116,7 +116,8 @@ img:hover {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #00000080;
+        background-color: #000;
+        color: #fff;
         transition: 0.3s;
         border-radius: 26px;
         
