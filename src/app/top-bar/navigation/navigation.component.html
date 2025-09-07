@@ -19,19 +19,22 @@
         articles
     </div> -->
 
-    <div class="dark-mode-toggle" 
-         (click)="toggleDarkMode()"
-         tabindex="0"
-         role="button"
-         [attr.aria-label]="darkModeService.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
-         [attr.aria-pressed]="darkModeService.isDarkMode()">
-        <span class="toggle-icon">{{ darkModeService.isDarkMode() ? '☀️' : '🌙' }}</span>
-    </div>
-
     <a href="https://github.com/michalakadam" target="_blank" rel="noopener">
         <img id="github-icon" [src]="darkModeService.isDarkMode() ? 'https://i.imgur.com/g9PKmx9.png' : 'https://i.imgur.com/RdN8sOW.png'">
     </a>
     <a href="https://www.linkedin.com/in/michalak-adam" target="_blank" rel="noopener">
         <img id="linkedin-icon" [src]="darkModeService.isDarkMode() ? 'https://i.imgur.com/o1qZCu6.png' : 'https://i.imgur.com/oSRGbzd.png'">
     </a>
+
+    <label class="dark-mode-toggle" 
+           [attr.aria-label]="darkModeService.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+        <input type="checkbox" 
+               [checked]="darkModeService.isDarkMode()" 
+               (change)="toggleDarkMode()"
+               aria-label="Dark mode toggle">
+        <span class="slider">
+            <span class="icon sun">☀</span>
+            <span class="icon moon">☾</span>
+        </span>
+    </label>
 </div>
