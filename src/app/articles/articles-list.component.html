@@ -1,0 +1,24 @@
+<section aria-labelledby="articles-heading">
+    <h1 id="articles-heading">Articles</h1>
+
+    @if (articles$ | async; as articles) {
+        <ul class="articles-list">
+            @for (a of articles; track a.slug; let i = $index) {
+                <li>
+                    <a [routerLink]="['/articles', a.slug]" class="article-link">
+                        <span class="title">{{ a.title }}</span>
+                        <time [attr.datetime]="a.date">{{ a.date }}</time>
+                    </a>
+
+                    @if (a.summary) {
+                        <p class="summary">{{ a.summary }}</p>
+                    }
+                </li>
+            } @empty {
+                <li>Nothing here yet.</li>
+            }
+        </ul>
+    } @else {
+        <p>Loading…</p>
+    }
+</section>
