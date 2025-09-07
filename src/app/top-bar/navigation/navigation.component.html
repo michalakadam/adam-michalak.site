@@ -1,5 +1,14 @@
 <div class="navigation-container">
     <div class="navigation-link"
+         [routerLink]="['/articles']"
+         routerLinkActive="active"
+         tabindex="0"
+         role="button"
+         aria-pressed="false">
+        articles
+    </div>
+
+    <div class="navigation-link"
         [routerLink]="['/about']" 
         routerLinkActive="active"
         tabindex="0"
@@ -7,17 +16,6 @@
         aria-pressed="false">
         about
     </div> 
-
-    <!-- TODO: bring back when more articles are available -->
-    <!-- <div class="navigation-link" -->
-        <!-- [routerLink]="['/articles']"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-        tabindex="0"
-        role="button"
-        aria-pressed="false">
-        articles
-    </div> -->
 
     <a href="https://github.com/michalakadam" target="_blank" rel="noopener">
         <img id="github-icon" [src]="darkModeService.isDarkMode() ? 'https://i.imgur.com/g9PKmx9.png' : 'https://i.imgur.com/RdN8sOW.png'">
