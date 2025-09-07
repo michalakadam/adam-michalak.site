@@ -8,12 +8,21 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0 30px;
     overflow: auto;
-    text-align: center; 
+    text-align: center;
+    background-color: $bg-color-light;
+    color: $text-color-light;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
     @media screen and (max-width: $mobile-large) {
         margin: 0 15px;
     }
     @media screen and (max-width: $mobile) {
         margin: 0 10px;
+    }
+    
+    &.dark-mode {
+        background-color: $bg-color-dark;
+        color: $text-color-dark;
     }
 }
 

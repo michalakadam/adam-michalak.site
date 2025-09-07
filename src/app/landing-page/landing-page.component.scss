@@ -22,6 +22,12 @@
             font-size: 44px;
             font-weight: bold;
             line-height: 1.5em;
+            color: $text-color-light;
+            
+            :host-context(body.dark-mode) & {
+                color: $text-color-dark;
+            }
+            
             @media screen and (max-width: $mobile) {
                 font-size: 28px;
             }
@@ -108,6 +114,12 @@
                 opacity: 0;
                 transition-duration: 3.6s;
                 -webkit-transition-duration: 3.6s;
+                color: $text-color-light;
+                
+                :host-context(body.dark-mode) & {
+                    color: $text-color-dark;
+                }
+                
                 @media screen and (max-width: $mobile-large) {
                     font-size: 28px;
                     margin: 0 25px;

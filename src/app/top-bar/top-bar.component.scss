@@ -15,6 +15,12 @@
     cursor: pointer;
     font-size: 20px;
     opacity: 0.5;
+    color: $text-color-light;
+    transition: color 0.3s ease;
+    
+    :host-context(body.dark-mode) & {
+        color: $text-color-dark;
+    }
     @media screen and (max-width: $mobile-large) {
         font-size: 16px;
     }

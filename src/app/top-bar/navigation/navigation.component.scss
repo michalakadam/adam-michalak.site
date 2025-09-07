@@ -11,6 +11,12 @@
 div {
     cursor: pointer;
     font-weight: bold;
+    color: $text-color-light;
+    
+    :host-context(body.dark-mode) & {
+        color: $text-color-dark;
+    }
+    
     @media screen and (max-width: $mobile-large) {
         font-size: 14px;
     }
@@ -28,7 +34,11 @@ div {
 
 .active {
     text-decoration: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $border-color-light;
+    
+    :host-context(body.dark-mode) & {
+        border-bottom-color: $border-color-dark;
+    }
 }
 
 img {
@@ -56,5 +66,28 @@ img:hover {
     }
     @media screen and (max-width: $mobile) {
         margin-right: 10px;
+    }
+}
+
+.dark-mode-toggle {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.2);
+    }
+    
+    @media screen and (max-width: $mobile-large) {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+    @media screen and (max-width: $mobile) {
+        margin-right: 10px;
+        font-size: 18px;
     }
 }

@@ -14,7 +14,9 @@ import {PageFooterComponent} from "./page-footer/page-footer.component";
 })
 export class AppComponent implements OnInit {
 
-  constructor(readonly windowSizeDetector: WindowSizeDetector) {}
+  constructor(
+    readonly windowSizeDetector: WindowSizeDetector,
+  ) {}
 
   ngOnInit() {
     // Throw setting window size to event loop so that it happens

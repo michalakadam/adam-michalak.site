@@ -27,6 +27,11 @@
             margin-bottom: 0.75em;
             margin-top: 0.75em;
             padding-top: 10px;
+            color: $text-color-light;
+            
+            :host-context(body.dark-mode) & {
+                color: $text-color-dark;
+            }
             @media screen and (max-width: 1700px) {
                 font-size: 54px;
             }
@@ -43,6 +48,11 @@
 
         p {
             text-align: justify;
+            color: $text-color-light;
+            
+            :host-context(body.dark-mode) & {
+                color: $text-color-dark;
+            }
         }
     }
 
@@ -60,11 +70,17 @@
 }
 
 button {
-    background-color: black;
-    color: white;
+    background-color: $text-color-light;
+    color: $bg-color-light;
     font-size: 14px;
     font-weight: 700;
     height: 40px;
     width: 160px;
     margin: 75px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+    :host-context(body.dark-mode) & {
+        background-color: $text-color-dark;
+        color: $bg-color-dark;
+    }
 }
