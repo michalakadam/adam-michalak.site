@@ -9,6 +9,7 @@ import {AsyncPipe} from "@angular/common";
 @Component({
     selector: 'app-article-detail',
     templateUrl: './article-detail.component.html',
+    styleUrls: ['./article-detail.component.scss'],
     standalone: true,
     imports: [
         MarkdownComponent,
