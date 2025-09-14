@@ -135,38 +135,69 @@
     // CV Download Button
     a[mat-raised-button] {
         /* Material 3 tokens the component reads */
-        --mdc-elevated-button-container-color: black;
+        --mdc-elevated-button-container-color: #1a1a1a;
         --mdc-elevated-button-label-text-color: white;
 
         background-color: var(--mdc-elevated-button-container-color);
         color: var(--mdc-elevated-button-label-text-color);
 
-        font-size: 0.875em;
-        font-weight: 700;
-        height: 2.5em;
-        width: 10em;
-        margin: 1.5625em auto 4.6875em auto;
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        height: 3.5em;
+        width: 12em;
+        margin: 3em auto 5em auto;
         align-self: center;
+        border-radius: 0.5em;
+        border: 0.125em solid transparent;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            --mdc-elevated-button-container-color: transparent;
+            --mdc-elevated-button-label-text-color: #1a1a1a;
+            border-color: #1a1a1a;
+            box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.15);
+            transform: translateY(-0.125em);
+        }
 
         &:active {
-            --mdc-elevated-button-container-color: black;
+            --mdc-elevated-button-container-color: #1a1a1a;
+            --mdc-elevated-button-label-text-color: white;
+            transform: translateY(0);
+            box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.2);
         }
+
         &:focus-visible {
-            outline: 0.125em solid currentColor;
-            outline-offset: 0.125em;
+            outline: 0.125em solid #1a1a1a;
+            outline-offset: 0.25em;
         }
     }
 
     /* Dark mode – when <body class="dark-mode"> */
     :host-context(body.dark-mode) a[mat-raised-button] {
-        --mdc-elevated-button-container-color: white;
-        --mdc-elevated-button-label-text-color: black;
+        --mdc-elevated-button-container-color: #f5f5f5;
+        --mdc-elevated-button-label-text-color: #1a1a1a;
 
         background-color: var(--mdc-elevated-button-container-color);
         color: var(--mdc-elevated-button-label-text-color);
+        box-shadow: 0 0.25em 0.75em rgba(255, 255, 255, 0.1);
+
+        &:hover {
+            --mdc-elevated-button-container-color: transparent;
+            --mdc-elevated-button-label-text-color: #f5f5f5;
+            border-color: #f5f5f5;
+            box-shadow: 0 0.5em 1.5em rgba(255, 255, 255, 0.15);
+        }
 
         &:active {
-            --mdc-elevated-button-container-color: white;
+            --mdc-elevated-button-container-color: #f5f5f5;
+            --mdc-elevated-button-label-text-color: #1a1a1a;
+        }
+
+        &:focus-visible {
+            outline-color: #f5f5f5;
         }
     }
 }
