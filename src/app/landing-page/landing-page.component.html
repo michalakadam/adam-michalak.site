@@ -1,9 +1,13 @@
 <div class="page-container">
     <div class="text">
-        <p class="title">
+        <div class="title">
             I am<br/>
-            <span class="description" [@fadeOut]="state" (@fadeOut.done)="onDone($event)">{{description}}</span><br/>
-            full-stack developer.&nbsp;
-        </p>
+            <div class="animated-line">
+                <span class="description" [@fadeOut]="state" (@fadeOut.done)="onDone($event)">{{secondVerse}}</span>
+            </div>
+            <div class="animated-line">
+                <span class="description" [@fadeOut]="state">{{thirdVerse}}.</span>
+            </div>
+        </div>
     </div>
 </div>

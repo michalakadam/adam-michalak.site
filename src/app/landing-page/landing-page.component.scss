@@ -14,8 +14,13 @@
     .text {
         margin: 0 50px;
         text-align: left;
+        width: 600px;
         @media screen and (max-width: $desktop) {
             margin: 0;
+            width: 90%;
+        }
+        @media screen and (max-width: $mobile) {
+            width: 95%;
         }
 
         .title {
@@ -30,6 +35,22 @@
             
             @media screen and (max-width: $mobile) {
                 font-size: 28px;
+            }
+
+            .animated-line {
+                display: block;
+                height: 1.5em;
+                position: relative;
+                width: 100%;
+            }
+
+            .description {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                white-space: nowrap;
+                width: auto;
             }
         }
     }
