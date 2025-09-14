@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { WindowSizeDetector } from '../services/window-size-detector.service';
+import { MatButton } from "@angular/material/button";
 
 import { trigger, state, animate, transition, style } from '@angular/animations';
 
@@ -15,13 +18,25 @@ export const fadeOut = trigger('fadeOut', [
   styleUrls: ['./landing-page.component.scss'],
   standalone: true,
   animations: [fadeOut],
+  imports: [
+    MatButton
+  ]
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnDestroy {
 
   secondVerse = "highly-driven";
   thirdVerse = "problem solver";
   private invocationNumber = 0;
   state = "inactive";
+  private subscription: Subscription;
+
+  constructor(readonly windowSizeDetector: WindowSizeDetector, readonly changeDetector: ChangeDetectorRef) {
+    this.subscription = this.windowSizeDetector.windowSizeChanged$.subscribe(
+      () => {
+        this.changeDetector.detectChanges();
+      }
+    );
+  }
 
   private pickDescription(): void {
     this.invocationNumber++;
@@ -53,5 +68,9 @@ export class LandingPageComponent {
         this.state = 'active';
       }, 0);
     }
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

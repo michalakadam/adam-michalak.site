@@ -2,56 +2,171 @@
 
 .page-container {
     display: flex;
-    margin-top: 150px;
-    align-items: center;
-    justify-content: center;
-    --delay: 100ms;
+    flex-direction: column;
+    margin: 6.25em 10% 0;
+    align-items: stretch;
+
+    @media screen and (max-width: $desktop-large) {
+        margin: 4.375em 5% 0;
+    }
     @media screen and (max-width: $mobile-large) {
-        flex-direction: column;
-        margin-top: 80px;
+        margin: 1.25em 3% 0;
     }
 
-    .text {
-        margin: 0 50px;
-        text-align: left;
-        width: 600px;
+    // Top section with animated text and picture
+    .top-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 3em;
+
         @media screen and (max-width: $desktop) {
-            margin: 0;
-            width: 90%;
-        }
-        @media screen and (max-width: $mobile) {
-            width: 95%;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-bottom: 2em;
         }
 
-        .title {
-            font-size: 44px;
-            font-weight: bold;
-            line-height: 1.5em;
+        .animated-text {
+            flex: 1;
+            text-align: left;
+            margin-right: 5%;
+
+            @media screen and (max-width: $desktop) {
+                margin-right: 0;
+                margin-bottom: 1.875em;
+            }
+
+            .title {
+                font-size: 2.75em;
+                font-weight: bold;
+                line-height: 1.5em;
+                color: $text-color-light;
+
+                :host-context(body.dark-mode) & {
+                    color: $text-color-dark;
+                }
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 1.75em;
+                }
+
+                .animated-line {
+                    display: block;
+                    height: 1.5em;
+                    position: relative;
+                    width: 100%;
+                }
+
+                .description {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    white-space: nowrap;
+                    width: auto;
+                }
+            }
+        }
+
+        .picture-section {
+            flex-shrink: 0;
+            position: relative;
+
+            #vertical-pic {
+                width: 21.875em;
+                border-radius: 0.5em;
+                mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+                -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+                @media screen and (max-width: 1700px) {
+                    width: 18.75em;
+                }
+            }
+
+            #horizontal-pic {
+                max-width: 100%;
+                height: auto;
+                border-radius: 0.5em;
+                mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+                -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+            }
+        }
+    }
+
+    // About content section
+    .about-content {
+        text-align: left;
+        margin-bottom: 3.125em;
+
+        .about-title {
+            font-size: 3.875em;
+            font-weight: 600;
+            margin-bottom: 0.75em;
+            margin-top: 0.75em;
+            padding-top: 0.625em;
             color: $text-color-light;
-            
+
             :host-context(body.dark-mode) & {
                 color: $text-color-dark;
             }
-            
-            @media screen and (max-width: $mobile) {
-                font-size: 28px;
+            @media screen and (max-width: 1700px) {
+                font-size: 3.375em;
             }
+            @media screen and (max-width: $desktop-large) {
+                font-size: 2.625em;
+            }
+            @media screen and (max-width: $desktop-medium) {
+                font-size: 2.125em;
+            }
+            @media screen and (max-width: $mobile-large) {
+                font-size: 1.625em;
+            }
+        }
 
-            .animated-line {
-                display: block;
-                height: 1.5em;
-                position: relative;
-                width: 100%;
-            }
+        p {
+            text-align: justify;
+            color: $text-color-light;
 
-            .description {
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                white-space: nowrap;
-                width: auto;
+            :host-context(body.dark-mode) & {
+                color: $text-color-dark;
             }
+        }
+    }
+
+    // CV Download Button
+    a[mat-raised-button] {
+        /* Material 3 tokens the component reads */
+        --mdc-elevated-button-container-color: black;
+        --mdc-elevated-button-label-text-color: white;
+
+        background-color: var(--mdc-elevated-button-container-color);
+        color: var(--mdc-elevated-button-label-text-color);
+
+        font-size: 0.875em;
+        font-weight: 700;
+        height: 2.5em;
+        width: 10em;
+        margin: 1.5625em auto 4.6875em auto;
+        align-self: center;
+
+        &:active {
+            --mdc-elevated-button-container-color: black;
+        }
+        &:focus-visible {
+            outline: 0.125em solid currentColor;
+            outline-offset: 0.125em;
+        }
+    }
+
+    /* Dark mode – when <body class="dark-mode"> */
+    :host-context(body.dark-mode) a[mat-raised-button] {
+        --mdc-elevated-button-container-color: white;
+        --mdc-elevated-button-label-text-color: black;
+
+        background-color: var(--mdc-elevated-button-container-color);
+        color: var(--mdc-elevated-button-label-text-color);
+
+        &:active {
+            --mdc-elevated-button-container-color: white;
         }
     }
 }
