@@ -7,12 +7,9 @@
                 <li>
                     <a [routerLink]="['/articles', a.slug]" class="article-link">
                         <span class="title">{{ a.title }}</span>
+                        <p class="summary">{{ a.summary }}</p>
                         <time [attr.datetime]="a.date">{{ a.date }}</time>
                     </a>
-
-                    @if (a.summary) {
-                        <p class="summary">{{ a.summary }}</p>
-                    }
                 </li>
             } @empty {
                 <li>Nothing here yet.</li>
