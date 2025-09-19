@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "lint": "ng lint",
-    "prestart": "node scripts/build-articles-index.mjs",
-    "prebuild": "node scripts/build-articles-index.mjs"
+    "build-articles": "node scripts/build-articles-index.mjs"
   },
   "private": true,
   "dependencies": {
