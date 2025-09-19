@@ -7,11 +7,11 @@ summary: "ChatGPT workflow for accurate responses"
 
 # Projects with deep research
 
-## ChatGPT workflow for accurate responses
+### ChatGPT workflow for accurate responses
 
 I’ve tried many AI tools over time, but the one that I keep coming back to \- and paying for \- is [ChatGPT from OpenAI](https://chat.openai.com/). Beyond the chat window, it offers a set of functionalities that help optimize the accuracy of responses. In this article, you will find the specific use cases and battle-tested flows that I rely on to get reliable results.
 
-# tl;dr
+## tl;dr
 
 To maximize answer accuracy:
 
@@ -21,9 +21,9 @@ To maximize answer accuracy:
 
 ---
 
-# Tools overview
+## Tools overview
 
-## Reasoning models
+#### Reasoning models
 
 Model names change fast; the durable rule doesn’t: for research-grade accuracy, default to a **reasoning model**. Reasoning models allocate more compute to multi-step thinking and can decide when to call tools (web, image analysis). In practice, that means:
 
@@ -31,11 +31,11 @@ Model names change fast; the durable rule doesn’t: for research-grade accuracy
 * More disciplined tool use for calculations, source-checking, and extraction.  
 * Clearer handling of uncertainty (what’s known, what’s not, and why).
 
-## Deep research
+#### Deep research
 
 [**Deep Research**](https://openai.com/index/introducing-deep-research/) lets you upload a dense source (think: a 600‑page book, a migration guide, or a YouTube channel transcript) and receive a concise, query‑ready digest. I use it to turn entire corpora into searchable **Markdown** files and attach them to a Project as context. Plan ahead: runs can take up to 30 minutes.
 
-## Projects
+#### Projects
 
 ![][image1]
 
@@ -43,47 +43,47 @@ Model names change fast; the durable rule doesn’t: for research-grade accuracy
 
 ---
 
-# Workflow
+## Workflow
 
 ![][image2]
 
 Getting a Project to consistently deliver accurate answers takes some upfront setup \- but trust me \- that investment pays off.
 
-## Attach project files
+#### Attach project files
 
 Gather the sources you want the model to rely on: PDFs, blog posts, transcripts. For long materials that won’t fit in an LLM’s context window, run Deep Research to produce concise multi-page summaries, then upload them as project files.
 
-## Write project custom instructions
+#### Write project custom instructions
 
 Strong custom instructions are the backbone of reliable answers. In this step, describe what you want from the Project, outline your goals, and define what a ‘good response’ looks like, while giving the assistant the context it needs. The clearer the instructions, the better the results.
 
-## Ask and refine
+#### Ask and refine
 
 Start working inside the Project. If answers feel off \- too shallow, off-topic, or inconsistent \- update the instructions and iterate. Over time, the Project will settle into a dependable rhythm.
 
 ---
 
-# Use cases
+## Use cases
 
 ![][image3]
 
-## Configuring the local environment
+#### Configuring the local environment
 
 For my Arch Linux \+ KDE workstation, I spun up a dedicated Project packed with Deep Research digests of the Arch Wiki and my own setup details, then asked ChatGPT to act as a calm, opinionated sysadmin. During installation, it walked me through disk partitioning, Plasma setup, and the inevitable pacman keyring hiccups, explaining the “why” behind each command so I never felt like I was copy-pasting magic. Post-install, the Project doubles as a maintenance buddy: when Arch News flags a breaking change, it drafts a safe update plan, and when something misbehaves, it guides me through logs and journalctl until the root cause clicks. The result is a rolling-release system that stays bleeding-edge without bleeding my evenings.
 
-## Large-scale code migrations
+#### Large-scale code migrations
 
 For a recent enterprise-scale refactor that replaced thousands of Elasticsearch HLRC calls with the new Java API client, I set up an isolated Project stocked with bite-sized migration notes. Inside that workspace, ChatGPT became a dependable teammate—translating each legacy `QueryBuilders` construct into the fluent lambda syntax, flagging hidden breaking changes (mandatory TLS, dropped document types), and generating (oftentimes) compile-ready patches. Because every suggestion referenced the same curated sources, guidance stayed consistent through weeks of incremental development. 
 
-## AI journaling
+#### AI journaling
 
 AI Journal is my go-to place to resolve challenging situations, reflect, and plan. One of my favorite pastimes recently has been to hit the AI Journal with a simple "Let's talk\!". Because the Project keeps all past sessions and guidance in one sandboxed context, the assistant remembers themes without dragging in unrelated topics, so the conversation feels simultaneously intimate and well-structured. This turns a ten-minute typing ritual into a focused self-coaching session that surfaces blind spots faster than solo journaling.
 
-## Reading books
+#### Reading books
 
 Reading a book with AI (recently Robert Fritz’s *The Path of Least Resistance)* feels like having a private seminar: I ask the assistant to clarify difficult concepts, challenge my takeaways, and suggest reflection prompts that fit my own goals. The result is a study loop that turns thick tomes into actionable insights I can revisit or build on months later.
 
-## Travelling
+#### Travelling
 
 For an upcoming trip to Rome, I created a dedicated Project to plan all of the trip details. With flights, hotel details, and a high-level daily plan attached, ChatGPT acted as a travel guide who balanced sightseeing with afternoons by the sea. Instead of drowning in guidebooks, I could focus on the experience itself. I also received excellent recommendations for a documentary to watch beforehand (“Meet the Romans” with Mary Beard) and a book for the train rides to the nearby beaches (“Cicero” by R. Harris). Because the Project kept everything scoped and contextual, the planning process felt light and enjoyable.
 
@@ -95,7 +95,7 @@ Fun fact: each of the paragraphs in the "Use Cases" section was generated by sta
 
 On top of that, this article was created within the “Writing blog posts” project using another ChatGPT feature that I find useful for writing with AI \- [Canvas](https://openai.com/index/introducing-canvas/).
 
-# Words of caution
+## Words of caution
 
 Even with the best setup and most carefully crafted prompt, AI makes mistakes. Don’t trust the AI blindly; always verify responses.
 
