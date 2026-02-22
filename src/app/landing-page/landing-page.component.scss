@@ -26,6 +26,7 @@
             text-align: left;
             max-width: 80%;
             margin: 0 auto;
+            user-select: none;
 
             @media screen and (max-width: $mobile-large) {
                 max-width: 100%;
