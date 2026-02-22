@@ -53,5 +53,8 @@ pull_and_build.sh
 #angular cache
 .angular/
 
+# Claude Code
+.claude/
+
 # Ignore Mac DS_Store files
 **/.DS_Store

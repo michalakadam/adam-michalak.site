@@ -13,27 +13,22 @@
         margin: 1.25em 3% 0;
     }
 
-    // Top section with animated text and picture
+    // Hero section with centered animated text
     .top-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 3em;
+        padding: 3em 0;
 
         @media screen and (max-width: $desktop) {
-            align-items: flex-start;
-            flex-direction: column;
             margin-bottom: 2em;
+            padding: 2em 0;
         }
 
         .animated-text {
-            flex: 1;
             text-align: left;
-            margin-right: 5%;
+            max-width: 80%;
+            margin: 0 auto;
 
-            @media screen and (max-width: $desktop) {
-                margin-right: 0;
-                margin-bottom: 1.875em;
+            @media screen and (max-width: $mobile-large) {
+                max-width: 100%;
             }
 
             .title {
@@ -53,41 +48,19 @@
                 .animated-line {
                     display: block;
                     height: 1.5em;
-                    position: relative;
-                    width: 100%;
+
+                    &:last-child {
+                        height: 4.5em;
+
+                        @media screen and (max-width: $mobile) {
+                            height: 3em;
+                        }
+                    }
                 }
 
                 .description {
-                    display: inline-block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    white-space: nowrap;
-                    width: auto;
+                    display: inline;
                 }
-            }
-        }
-
-        .picture-section {
-            flex-shrink: 0;
-            position: relative;
-
-            #vertical-pic {
-                width: 21.875em;
-                border-radius: 0.5em;
-                mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
-                -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
-                @media screen and (max-width: 1700px) {
-                    width: 18.75em;
-                }
-            }
-
-            #horizontal-pic {
-                max-width: 100%;
-                height: auto;
-                border-radius: 0.5em;
-                mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
-                -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
             }
         }
     }
@@ -95,32 +68,6 @@
     // About content section
     .about-content {
         text-align: left;
-        margin-bottom: 3.125em;
-
-        .about-title {
-            font-size: 3.875em;
-            font-weight: 600;
-            margin-bottom: 0.75em;
-            margin-top: 0.75em;
-            padding-top: 0.625em;
-            color: $text-color-light;
-
-            :host-context(body.dark-mode) & {
-                color: $text-color-dark;
-            }
-            @media screen and (max-width: 1700px) {
-                font-size: 3.375em;
-            }
-            @media screen and (max-width: $desktop-large) {
-                font-size: 2.625em;
-            }
-            @media screen and (max-width: $desktop-medium) {
-                font-size: 2.125em;
-            }
-            @media screen and (max-width: $mobile-large) {
-                font-size: 1.625em;
-            }
-        }
 
         p {
             text-align: justify;
@@ -146,7 +93,7 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         height: 3.5em;
-        width: 12em;
+        width: 14em;
         margin: 3em auto 5em auto;
         align-self: center;
         border-radius: 0.5em;

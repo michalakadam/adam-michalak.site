@@ -1,6 +1,4 @@
-import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { WindowSizeDetector } from '../services/window-size-detector.service';
+import { Component } from '@angular/core';
 import { MatButton } from "@angular/material/button";
 
 import { trigger, state, animate, transition, style } from '@angular/animations';
@@ -8,8 +6,8 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 export const fadeOut = trigger('fadeOut', [
   state('active', style({ opacity: 1 })),
   state('inactive', style({ opacity: 0 })),
-  transition('active => inactive', [animate(1250)]),
-  transition('inactive => active', [animate(1250)])
+  transition('active => inactive', [animate(1500)]),
+  transition('inactive => active', [animate(1500)])
 ]);
 
 @Component({
@@ -22,36 +20,27 @@ export const fadeOut = trigger('fadeOut', [
     MatButton
   ]
 })
-export class LandingPageComponent implements OnDestroy {
+export class LandingPageComponent {
 
-  secondVerse = "highly-driven";
-  thirdVerse = "problem solver";
+  secondVerse = "a staff engineer";
+  thirdVerse = "who thinks in systems.";
   private invocationNumber = 0;
   state = "inactive";
-  private subscription: Subscription;
-
-  constructor(readonly windowSizeDetector: WindowSizeDetector, readonly changeDetector: ChangeDetectorRef) {
-    this.subscription = this.windowSizeDetector.windowSizeChanged$.subscribe(
-      () => {
-        this.changeDetector.detectChanges();
-      }
-    );
-  }
 
   private pickDescription(): void {
     this.invocationNumber++;
     if (this.invocationNumber % 4 === 0) {
-      this.secondVerse = "highly-driven";
-      this.thirdVerse = "problem solver";
+      this.secondVerse = "a staff engineer";
+      this.thirdVerse = "who thinks in systems.";
     } else if (this.invocationNumber % 4 === 1) {
-      this.secondVerse = "self-taught";
-      this.thirdVerse = "full stack developer";
+      this.secondVerse = "a platform engineer";
+      this.thirdVerse = "scaling how teams ship software.";
     } else if (this.invocationNumber % 4 === 2) {
-      this.secondVerse = "continuously-growing";
-      this.thirdVerse = "technical leader";
+      this.secondVerse = "a technical leader";
+      this.thirdVerse = "bridging code, architecture, and organizational design.";
     } else {
-      this.secondVerse = "relentlessly-proactive";
-      this.thirdVerse = "team player";
+      this.secondVerse = "a team leader";
+      this.thirdVerse = "building teams that ship with confidence.";
     }
   }
 
@@ -68,9 +57,5 @@ export class LandingPageComponent implements OnDestroy {
         this.state = 'active';
       }, 0);
     }
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 }
