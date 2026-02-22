@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CommonModule} from "@angular/common";
+
 import {RouterLink} from "@angular/router";
 import {NavigationComponent} from "./navigation/navigation.component";
 
@@ -8,6 +8,6 @@ import {NavigationComponent} from "./navigation/navigation.component";
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterLink, NavigationComponent],
+  imports: [RouterLink, NavigationComponent],
 })
 export class TopBarComponent {}

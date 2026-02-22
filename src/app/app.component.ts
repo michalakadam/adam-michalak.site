@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { WindowSizeDetector } from './services/window-size-detector.service';
-import {CommonModule} from "@angular/common";
+
 import {RouterOutlet} from "@angular/router";
 import {TopBarComponent} from "./top-bar/top-bar.component";
 import {PageFooterComponent} from "./page-footer/page-footer.component";
@@ -10,7 +10,7 @@ import {PageFooterComponent} from "./page-footer/page-footer.component";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TopBarComponent, PageFooterComponent],
+  imports: [RouterOutlet, TopBarComponent, PageFooterComponent],
 })
 export class AppComponent implements OnInit {
 
