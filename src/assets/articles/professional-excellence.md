@@ -11,7 +11,7 @@ summary: "What Aristotle can teach us about producing quality output"
 
 There are people I've worked with who seem to do the right thing every time. Not through visible effort, not through grinding - they just operate at a level where excellent conduct looks automatic.
 
-I recognized the pattern because I operate this way myself in many areas. But I could never fully articulate *why* it worked where it did - or why it sometimes didn't. Aristotle had a more precise way of thinking about this, and it gave me a framework to stop guessing and start being strategic about where I invest my effort.
+For years I assumed they were simply more disciplined than me. That they had more willpower, or fewer bad impulses to manage. But Aristotle had a more precise way of thinking about this, and it changed how I approach my own development.
 
 ## The four states of character
 
