@@ -5,8 +5,8 @@ date: "2026-03-21"
 summary: "The neurobiology of translating deliberate practice into effortless attention"
 ---
 
-**Unconscious Competence**
-The neurobiology of translating deliberate practice into effortless attention
+# Unconscious Competence
+## The neurobiology of translating deliberate practice into effortless attention
 
 I've been learning how to fly drones on a simulator. Ten hours in, I cut my lap records by 30%. I was in the flow - for the first time I felt like I actually get it.
 
@@ -16,7 +16,7 @@ I mean smelling tea while making it. Hearing someone when they're talking. Notic
 
 What builds this kind of awareness in a person? Let's explore biological mechanism behind flow.
 
-**Myelin - the foundation of unconscious competence**
+### Myelin - the foundation of unconscious competence
 
 Let's start with biology, because this is the crux.
 
@@ -24,7 +24,7 @@ Axons - "cables" between neurons - can be coated in myelin, a fatty sheath produ
 
 The key part: myelin doesn't coat all pathways equally. It coats the ones you activate regularly and correctly. This is a biological mechanism of specialization.
 
-**Why slow and deliberate, not fast and high-volume**
+### The only way to go fast, is to go well
 
 Fast, sloppy practice myelinates mistakes. Literally - you're writing incorrect patterns into hardware. The body "learns" bad form with increasing confidence.
 
@@ -32,11 +32,11 @@ Slow, deliberate practice at the edge of your ability works differently. The sig
 
 Daniel Coyle calls this "deep practice" in *The Talent Code* - deliberately operating at the edge of your capabilities, with full attention on every iteration. There's no shortcut through volume. The ten hours I spent on the simulator didn't make me faster because I flew more laps. They made me faster because each lap forced micro-corrections that my brain gradually hardwired.
 
-**The dark mirror**
+### Double-edged sword
 
 Myelin doesn't distinguish between a circuit worth reinforcing and the one worth breaking. Scroll your phone with enough regularity and your brain will myelinate that too - the thumb movement, the dopamine anticipation, the reflexive check. Rumination works the same way: rehearse an anxious thought loop often enough and it becomes background hum, running with the same effortless automaticity that you'd want for presence. The same biology that builds mastery builds compulsion. The difference is in what you choose to practice.
 
-**What gets "freed" when myelin does its work**
+### What gets "freed" when myelin does its work 
 
 This is where it gets really interesting.
 
@@ -48,19 +48,16 @@ But not for doing nothing. For pure observation.
 
 I have this feeling during flight: I don't decide on a correction - the correction happens. It's not magic. It's my cerebellum flying the drone while the cortex just watches and enjoys the ride.
 
-**Flow as a biological side effect**
+### Flow as a biological side effect
 
 Csikszentmihalyi described flow behaviorally. Neurobiologically, it's a concrete state: the prefrontal cortex shifts into observer mode - transient hypofrontality, a temporary reduction in prefrontal cortex activity. The inner critic goes quiet not because you "decided to silence it" - there's simply no work left for it to do at that level.
 
 This state isn't new. The Bhagavad Gita describes it with startling precision:
 
-```
-"With no desire for success, no anxiety about failure, indifferent to results, he burns up his actions in the fire of wisdom. Surrendering all thoughts of outcome, unperturbed, self-reliant, he does nothing at all, even when fully engaged in actions.
+> With no desire for success, no anxiety about failure, indifferent to results, he burns up his actions in the fire of wisdom. Surrendering all thoughts of outcome, unperturbed, self-reliant, he does nothing at all, even when fully engaged in actions.
+> There is nothing that he expects, nothing that he fears. Serene, free from possessions, untainted, acting with the body alone, content with whatever happens, unattached to pleasure or pain, success or failure, he acts and is never bound by his action. (BG, 4.19-26)
 
-There is nothing that he expects, nothing that he fears. Serene, free from possessions, untainted, acting with the body alone, content with whatever happens, unattached to pleasure or pain, success or failure, he acts and is never bound by his action." (BG, 4.19-26)
-```
-
-**The connection to mindfulness**
+### The connection to mindfulness
 
 My question about drone flying and my question about presence in everyday life turned out to be the same problem.
 
